@@ -49,7 +49,7 @@ Al ser un proyecto desarrollado con estándares web puros (HTML5, CSS3, JavaScri
    ```
 2. Conéctalo a tu repositorio público de GitHub:
    ```bash
-   git remote add origin https://github.com/Jostinchalan/Portafolio-Web.git
+   git remote add origin https://github.com/jostin49/Portafolio-digital.git
    git branch -M main
    git push -u origin main
    ```
@@ -57,4 +57,4 @@ Al ser un proyecto desarrollado con estándares web puros (HTML5, CSS3, JavaScri
    - Ve a **Settings** > **Pages**.
    - En **Source**, selecciona **Deploy from a branch** y elige la rama **main** / **root**.
    - Guarda los cambios. Tu sitio web se publicará automáticamente en:
-     `https://jostinchalan.github.io/Portafolio-Web/`
+     `https://jostin49.github.io/Portafolio-digital/`
