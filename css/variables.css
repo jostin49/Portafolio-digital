@@ -1,4 +1,4 @@
-﻿/**
+/**
  * DESIGN SYSTEM TOKENS - CSS CUSTOM PROPERTIES
  * Jostin Fernando Chalan Mora - Portafolio de Ingeniería de Software
  * Arquitectura de estilos basada en CSS Custom Properties (:root y [data-theme="dark"])
@@ -7,13 +7,13 @@
 :root {
   /* Paleta de Colores - Tema Claro */
   --color-primary: #06307f;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-light: #dbeafe;
+  --color-primary-hover: #0a47b8;
+  --color-primary-light: #e8effd;
   --color-primary-text: #ffffff;
 
   --color-secondary: #06307f;
-  --color-secondary-hover: #6d28d9;
-  --color-secondary-light: #ede9fe;
+  --color-secondary-hover: #3730a3;
+  --color-secondary-light: #eef2ff;
 
   --color-accent: #0284c7;
   --color-success: #16a34a;
@@ -75,9 +75,9 @@
   --color-primary-light: rgba(59, 130, 246, 0.15);
   --color-primary-text: #ffffff;
 
-  --color-secondary: #8b5cf6;
-  --color-secondary-hover: #a78bfa;
-  --color-secondary-light: rgba(139, 92, 246, 0.15);
+  --color-secondary: #5c66f6;
+  --color-secondary-hover: #7c86fc;
+  --color-secondary-light: rgba(92, 102, 246, 0.18);
 
   --color-accent: #38bdf8;
   --color-success: #22c55e;
