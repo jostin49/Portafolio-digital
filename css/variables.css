@@ -6,12 +6,12 @@
 
 :root {
   /* Paleta de Colores - Tema Claro */
-  --color-primary: #2563eb;
+  --color-primary: #06307f;
   --color-primary-hover: #1d4ed8;
   --color-primary-light: #dbeafe;
   --color-primary-text: #ffffff;
 
-  --color-secondary: #7c3aed;
+  --color-secondary: #06307f;
   --color-secondary-hover: #6d28d9;
   --color-secondary-light: #ede9fe;
 
@@ -35,17 +35,26 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
   /* Escala de Espaciado */
-  --space-xs: 0.25rem;  /* 4px */
-  --space-sm: 0.5rem;   /* 8px */
-  --space-md: 1rem;     /* 16px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
-  --space-2xl: 4.5rem;  /* 72px */
+  --space-xs: 0.25rem;
+  /* 4px */
+  --space-sm: 0.5rem;
+  /* 8px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 2rem;
+  /* 32px */
+  --space-xl: 3rem;
+  /* 48px */
+  --space-2xl: 4.5rem;
+  /* 72px */
 
   /* Bordes y Redondeo */
-  --radius-sm: 0.375rem; /* 6px */
-  --radius-md: 0.75rem;  /* 12px */
-  --radius-lg: 1rem;     /* 16px */
+  --radius-sm: 0.375rem;
+  /* 6px */
+  --radius-md: 0.75rem;
+  /* 12px */
+  --radius-lg: 1rem;
+  /* 16px */
   --radius-full: 9999px;
 
   /* Sombras */

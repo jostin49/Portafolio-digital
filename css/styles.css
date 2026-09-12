@@ -1,4 +1,4 @@
-﻿@import url('./variables.css');
+@import url('./variables.css');
 
 /* ==========================================================================
    1. RESET Y ESTILOS BASE
@@ -54,6 +54,44 @@ input, textarea {
 
 ul, ol {
   list-style: none;
+}
+
+/* Iconos Vectoriales Profesionales */
+.icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
+}
+
+.icon-inline {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.35rem;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
+
+.icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-md {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .container {
