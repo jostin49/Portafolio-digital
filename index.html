@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio web profesional e interactivo de Jostin Fernando Chalan Mora - Estudiante de 8vo semestre de Ingeniería en Software en UNEMI. Proyectos, habilidades y Design System.">
+  <meta name="author" content="Jostin Fernando Chalan Mora">
+  <meta name="keywords" content="Jostin Chalan, Ingenieria de Software, UNEMI, Portafolio, HTML5, CSS3, JavaScript, Ecuador">
+  <link rel="icon" type="image/png" href="assets/foto_perfil.png">
+  <title>Jostin Fernando Chalan Mora | Portafolio de Ingeniería de Software</title>
+  
+  <!-- Hojas de Estilo Propias (Separación de Presentación) -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       1. HEADER Y NAVEGACIÓN PRINCIPAL
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="#inicio" class="brand-logo" aria-label="Jostin Chalan - Inicio">
+          <span class="brand-badge">JC</span>
+          <span>Jostin<span class="brand-accent">.dev</span></span>
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+          <a href="#habilidades" class="nav-link">Habilidades</a>
+          <a href="#proyectos" class="nav-link">Proyectos</a>
+          <a href="#experiencia" class="nav-link">Experiencia</a>
+          <a href="#educacion" class="nav-link">Educación</a>
+          <a href="#design-system" class="nav-link">Design System</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <div class="nav-actions">
+          <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro u oscuro" title="Cambiar tema">
+            🌙
+          </button>
+          <button type="button" id="mobile-toggle" class="mobile-toggle-btn" aria-label="Abrir menú móvil" aria-expanded="false">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       2. CONTENIDO PRINCIPAL (MAIN)
+       ======================================================================= -->
+  <main id="main-content">
+
+    <!-- SECCIÓN: INICIO / HERO -->
+    <section id="inicio" class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="section-tag">✨ Portafolio Web Profesional</span>
+            <p class="hero-greeting">Hola, soy</p>
+            <!-- Único h1 semántico de la página -->
+            <h1 id="hero-title" class="hero-title">Jostin Fernando Chalan Mora</h1>
+            <p class="hero-subtitle">Estudiante de Ingeniería en Software — UNEMI</p>
+            <blockquote class="hero-quote">
+              "Ingeniero de Software en formación, preparado para aplicar mis conocimientos en proyectos reales. Innovar, aprender y crear es mi enfoque."
+            </blockquote>
+
+            <div class="hero-buttons">
+              <a href="#contacto" class="btn btn-primary">Contáctame</a>
+              <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+              <a href="#design-system" class="btn btn-outline">Design System</a>
+            </div>
+
+            <div class="social-links" aria-label="Redes profesionales">
+              <span class="social-label">Encuéntrame en:</span>
+              <a href="https://github.com/Jostinchalan" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub de Jostin" title="GitHub">
+                🐙
+              </a>
+              <a href="https://www.instagram.com/iam.jostin2" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram de Jostin" title="Instagram">
+                📸
+              </a>
+              <a href="mailto:jostinmora740@gmail.com" class="social-btn" aria-label="Correo de Jostin" title="Email">
+                ✉️
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <figure class="profile-figure">
+              <div class="profile-glow"></div>
+              <div class="profile-img-container">
+                <img src="assets/foto_perfil.png" alt="Fotografía profesional de Jostin Fernando Chalan Mora" class="profile-img">
+              </div>
+              <figcaption class="sr-only">Jostin Fernando Chalan Mora - Estudiante de Ingeniería en Software</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Conoce mi trayectoria</span>
+          <h2 id="about-title" class="section-title">Sobre Mí</h2>
+          <p class="section-description">
+            Ingeniero de Software en formación comprometido con el diseño de sistemas eficientes, escalables y con alto impacto social.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <!-- Columna Izquierda: Ficha Resumen -->
+          <article class="about-card">
+            <div class="about-avatar-mini">
+              <img src="assets/foto_perfil.png" alt="Miniatura de Jostin Chalan" class="profile-img">
+            </div>
+            <h3 style="text-align: center; font-weight: 800; font-size: 1.25rem;">Jostin Chalan Mora</h3>
+            <p style="text-align: center; font-size: 0.875rem; color: var(--color-primary); font-weight: 600;">
+              Ingeniería en Software (UNEMI)
+            </p>
+
+            <dl class="facts-list">
+              <div class="fact-item">
+                <dt class="fact-label">Ubicación:</dt>
+                <dd class="fact-value">Naranjito, Guayas, Ecuador</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label">Nivel Actual:</dt>
+                <dd class="fact-value">8vo Semestre Universitario</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label">Título Base:</dt>
+                <dd class="fact-value">Bachiller Técnico en Informática</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label">Colegio:</dt>
+                <dd class="fact-value">Unidad Educativa Naranjito</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label">Idiomas:</dt>
+                <dd class="fact-value">Español (Nativo), Inglés (Técnico)</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label">Disponibilidad:</dt>
+                <dd class="fact-value" style="color: var(--color-success);">Activa (Prácticas & Proyectos)</dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- Columna Derecha: Narrativa y Pilares -->
+          <div class="about-content">
+            <div class="bio-text">
+              <p>
+                Soy estudiante del <strong>Octavo Semestre de Ingeniería en Software</strong> en la 
+                <strong>Universidad Estatal de Milagro (UNEMI)</strong>. Cuento con una base técnica vocacional sólida al haberme graduado como <strong>Bachiller Técnico en Informática</strong>, lo que me otorgó destrezas prácticas tempranas en arquitectura de computadores, soporte y redes.
+              </p>
+              <p>
+                A lo largo de mi carrera universitaria me he especializado en el desarrollo web moderno con tecnologías como 
+                <strong>Python, Django, React, JavaScript y PostgreSQL</strong>, complementado con certificaciones oficiales en 
+                <strong>Cloud Computing (AWS Academy Cloud Foundations y GCP)</strong>.
+              </p>
+              <p>
+                Mi filosofía de trabajo combina el rigor metodológico, la ingeniería de software limpia y una actitud proactiva orientada a resolver problemas auténticos de nuestra comunidad.
+              </p>
+            </div>
+
+            <!-- Pilares -->
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <h4 class="pillar-title">🎓 Formación Universitaria</h4>
+                <p class="pillar-desc">Criterio analítico y diseño de arquitecturas sólidas en UNEMI.</p>
+              </div>
+              <div class="pillar-card">
+                <h4 class="pillar-title">💻 Desarrollo Full Stack</h4>
+                <p class="pillar-desc">Creación de interfaces accesibles e integración de APIs backend.</p>
+              </div>
+              <div class="pillar-card">
+                <h4 class="pillar-title">☁️ Nube y Escalabilidad</h4>
+                <p class="pillar-desc">Certificaciones AWS y Google Cloud aplicadas a entornos web.</p>
+              </div>
+              <div class="pillar-card">
+                <h4 class="pillar-title">🌱 Compromiso Social</h4>
+                <p class="pillar-desc">Proyectos con impacto en el reciclaje, el agro y el software libre.</p>
+              </div>
+            </div>
+
+            <!-- Banner de Valores -->
+            <article class="values-banner">
+              <h3 style="font-size: 1.125rem; font-weight: 800;">Valores y Principios Profesionales</h3>
+              <div class="values-grid">
+                <div class="value-item"><span>✓</span> Código limpio, modular y documentado</div>
+                <div class="value-item"><span>✓</span> Aprendizaje autodidacta continuo</div>
+                <div class="value-item"><span>✓</span> Trabajo colaborativo y honestidad</div>
+                <div class="value-item"><span>✓</span> Responsabilidad con los plazos de entrega</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: HABILIDADES (SKILLS) -->
+    <section id="habilidades" class="section" aria-labelledby="skills-title" style="background-color: var(--color-surface-hover);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Competencias Técnicas</span>
+          <h2 id="skills-title" class="section-title">Habilidades Profesionales</h2>
+          <p class="section-description">
+            Tecnologías y herramientas que domino, fundamentadas en proyectos académicos y certificaciones evaluables.
+          </p>
+        </header>
+
+        <!-- Filtros de Habilidades -->
+        <nav class="filter-nav" aria-label="Filtro de habilidades">
+          <button type="button" class="filter-btn skill-filter-btn active" data-category="all">Todas</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="frontend">Frontend</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="backend">Backend</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="database">Bases de Datos</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="cloud">Cloud & DevOps</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="tools">Herramientas</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="hardware">Hardware & IoT</button>
+        </nav>
+
+        <!-- Grid de Habilidades -->
+        <div class="skills-grid" id="skills-container">
+          <!-- Skill: HTML5 -->
+          <article class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">HTML5 Semántico</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+              </div>
+              <span class="skill-badge badge-avanzado">Avanzado</span>
+            </div>
+            <p class="skill-desc">Estructuración limpia y accesible con landmarks semánticos, SEO técnico y microformatos.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: CSS3 -->
+          <article class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">CSS3 & Custom Properties</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+              </div>
+              <span class="skill-badge badge-avanzado">Avanzado</span>
+            </div>
+            <p class="skill-desc">Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de variables :root.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: JavaScript -->
+          <article class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">JavaScript (ES6+)</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend / Logic</span>
+              </div>
+              <span class="skill-badge badge-intermedio">Intermedio</span>
+            </div>
+            <p class="skill-desc">Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos reactivos.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>78%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 78%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: React -->
+          <article class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">React</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend Framework</span>
+              </div>
+              <span class="skill-badge badge-intermedio">Intermedio</span>
+            </div>
+            <p class="skill-desc">Componentes funcionales, hooks personalizados, estado global y ciclo de vida de la UI.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: Python -->
+          <article class="skill-card" data-category="backend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">Python</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend & Data</span>
+              </div>
+              <span class="skill-badge badge-avanzado">Avanzado</span>
+            </div>
+            <p class="skill-desc">Programación orientada a objetos, scripts de automatización, Machine Learning y backend.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: Django -->
+          <article class="skill-card" data-category="backend">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">Django & REST Framework</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend</span>
+              </div>
+              <span class="skill-badge badge-intermedio">Intermedio</span>
+            </div>
+            <p class="skill-desc">Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: PostgreSQL -->
+          <article class="skill-card" data-category="database">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">PostgreSQL & SQL</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Bases de Datos</span>
+              </div>
+              <span class="skill-badge badge-intermedio">Intermedio</span>
+            </div>
+            <p class="skill-desc">Modelado de bases de datos relacionales, normalización, índices y consultas complejas.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: AWS -->
+          <article class="skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">AWS Cloud Foundations</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cloud Computing</span>
+              </div>
+              <span class="skill-badge badge-intermedio">Intermedio</span>
+            </div>
+            <p class="skill-desc">Certificación AWS Academy: EC2, S3, RDS, IAM, VPC y arquitecturas de alta disponibilidad.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: Git -->
+          <article class="skill-card" data-category="tools">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">Git & GitHub</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Control de Versiones</span>
+              </div>
+              <span class="skill-badge badge-avanzado">Avanzado</span>
+            </div>
+            <p class="skill-desc">Ramas de trabajo, pull requests, resolución de conflictos y publicación en GitHub Pages.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill: Hardware -->
+          <article class="skill-card" data-category="hardware">
+            <div class="skill-top">
+              <div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700;">Soporte Técnico de PC</h3>
+                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Infraestructura</span>
+              </div>
+              <span class="skill-badge badge-avanzado">Avanzado</span>
+            </div>
+            <p class="skill-desc">Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y sistemas operativos.</p>
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-meta">
+                <span>Dominio</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Portafolio Práctico</span>
+          <h2 id="projects-title" class="section-title">Proyectos Destacados</h2>
+          <p class="section-description">
+            Soluciones aplicadas que resuelven necesidades reales con código estructurado, repositorios abiertos y demos funcionales.
+          </p>
+        </header>
+
+        <!-- Filtros de Proyectos -->
+        <nav class="filter-nav" aria-label="Filtro de proyectos">
+          <button type="button" class="filter-btn project-filter-btn active" data-category="all">Todos</button>
+          <button type="button" class="filter-btn project-filter-btn" data-category="Eco-Tech / AI">Eco-Tech / AI</button>
+          <button type="button" class="filter-btn project-filter-btn" data-category="Web Application">Web Application</button>
+          <button type="button" class="filter-btn project-filter-btn" data-category="E-commerce">E-commerce</button>
+          <button type="button" class="filter-btn project-filter-btn" data-category="Open Source">Open Source</button>
+        </nav>
+
+        <!-- Grid de Proyectos -->
+        <div class="projects-grid">
+          <!-- Proyecto 1: EcoScam -->
+          <article class="project-card" data-category="Eco-Tech / AI">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/EcoScam.png" alt="Captura del proyecto EcoScam" class="project-img contain">
+                <figcaption class="project-category-tag">Eco-Tech / AI</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">EcoScam - Clasificación de Residuos</h3>
+                <p class="project-desc">Sistema inteligente de separación y clasificación de desechos sólidos mediante inteligencia artificial.</p>
+                <div class="problem-box">
+                  <span class="problem-box-title">Problema que resuelve:</span>
+                  <p class="problem-box-text">La baja tasa de reciclaje y la contaminación urbana provocada por la falta de separación correcta de residuos en origen.</p>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">Web</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button type="button" class="btn btn-outline open-modal-btn" data-project="ecosam" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                🔍 Ver Detalles
+              </button>
+              <a href="https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                Código GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: CUENTIA -->
+          <article class="project-card" data-category="Web Application">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/CuentIA.png" alt="Captura del proyecto CUENTIA" class="project-img">
+                <figcaption class="project-category-tag">Web Application</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">CUENTIA - Gestión Contable</h3>
+                <p class="project-desc">Sistema web integral de administración de cuentas, balance de ingresos/gastos y conciliación.</p>
+                <div class="problem-box">
+                  <span class="problem-box-title">Problema que resuelve:</span>
+                  <p class="problem-box-text">Descontrol financiero y pérdida de trazabilidad contable en pequeños negocios que dependen de registros en papel o Excel desarticulados.</p>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button type="button" class="btn btn-outline open-modal-btn" data-project="cuentia" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                🔍 Ver Detalles
+              </button>
+              <a href="https://github.com/Jostinchalan/CUENTIA.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                Código GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: AgroMercado -->
+          <article class="project-card" data-category="E-commerce">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/AgroMercado.png" alt="Captura del proyecto AgroMercado" class="project-img">
+                <figcaption class="project-category-tag">E-commerce</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">AgroMercado - Venta Directa</h3>
+                <p class="project-desc">Marketplace digital para conectar agricultores con compradores directos sin intermediarios abusivos.</p>
+                <div class="problem-box">
+                  <span class="problem-box-title">Problema que resuelve:</span>
+                  <p class="problem-box-text">Intermediación excesiva en el canal agropecuario que reduce los ingresos del campesino y encarece el producto para las familias.</p>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">Vercel</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button type="button" class="btn btn-outline open-modal-btn" data-project="agromercado" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                🔍 Ver Detalles
+              </button>
+              <a href="https://agro-mercado.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                Demo en Vivo
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: GUIOSPRO-FLOSS -->
+          <article class="project-card" data-category="Open Source">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/GuiosPro.png" alt="Captura de GUIOSPRO-FLOSS" class="project-img contain">
+                <figcaption class="project-category-tag">Open Source</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">GUIOSPRO-FLOSS</h3>
+                <p class="project-desc">Plataforma colaborativa para el ecosistema de Software Libre y Código Abierto para estudiantes.</p>
+                <div class="problem-box">
+                  <span class="problem-box-title">Problema que resuelve:</span>
+                  <p class="problem-box-text">Falta de recursos pedagógicos centralizados en español que orienten a los nuevos desarrolladores en buenas prácticas de código abierto.</p>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">FLOSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button type="button" class="btn btn-outline open-modal-btn" data-project="guiospro" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                🔍 Ver Detalles
+              </button>
+              <a href="https://guiospro-floss-1vve.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
+                Demo en Vivo
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: EXPERIENCIA Y EDUCACIÓN -->
+    <section id="experiencia" class="section" aria-labelledby="exp-title" style="background-color: var(--color-surface-hover);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Trayectoria Práctica</span>
+          <h2 id="exp-title" class="section-title">Experiencia Laboral</h2>
+          <p class="section-description">
+            Experiencia comprobada en soporte tecnológico, administración de sistemas y prácticas profesionales en UNEMI.
+          </p>
+        </header>
+
+        <div class="timeline">
+          <!-- Experiencia 1 -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Técnico de Soporte y Mantenimiento de Equipos</h3>
+                <p class="timeline-subtitle">Asistencia Técnica PC</p>
+              </div>
+              <span class="timeline-period">10/02/2022 - 16/04/2025</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Responsable del soporte técnico integral, diagnóstico de fallas de hardware y mantenimiento preventivo/correctivo.
+            </p>
+            <ul class="timeline-list">
+              <li>Instalación y configuración de sistemas operativos, paquetería y software corporativo.</li>
+              <li>Diagnóstico y sustitución de hardware defectuoso con pruebas de estrés.</li>
+              <li>Configuración básica de redes locales (LAN), routers e impresoras compartidas.</li>
+            </ul>
+          </article>
+
+          <!-- Experiencia 2 -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Pasante Administrativo / Tecnológico</h3>
+                <p class="timeline-subtitle">UNEMI - Dirección de Operaciones Tecnológicas</p>
+              </div>
+              <span class="timeline-period">96 Horas Acreditadas</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Prácticas preprofesionales en laboratorios de computación y operaciones tecnológicas de la universidad.
+            </p>
+            <ul class="timeline-list">
+              <li>Mantenimiento preventivo de los equipos informáticos de laboratorios académicos.</li>
+              <li>Inventario y control de activos tecnológicos institucionales.</li>
+            </ul>
+          </article>
+
+          <!-- Experiencia 3 -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Pasante en Desarrollo y Soporte TI</h3>
+                <p class="timeline-subtitle">UNEMI - Dirección de Tecnologías de Información (DTIC)</p>
+              </div>
+              <span class="timeline-period">Prácticas Profesionales</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Colaboración activa en soporte técnico institucional y mantenimiento de aplicaciones web internas.
+            </p>
+            <ul class="timeline-list">
+              <li>Participación en tareas de soporte y depuración de sistemas institucionales.</li>
+              <li>Documentación de manuales técnicos para usuarios finales y resolución de incidencias.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: EDUCACIÓN Y CERTIFICACIONES -->
+    <section id="educacion" class="section" aria-labelledby="edu-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Formación Académica</span>
+          <h2 id="edu-title" class="section-title">Educación & Certificaciones</h2>
+          <p class="section-description">
+            Estudios de ingeniería en curso, bachillerato técnico y acreditaciones oficiales en computación en la nube.
+          </p>
+        </header>
+
+        <div class="timeline" style="margin-bottom: var(--space-xl);">
+          <article class="timeline-item" style="border-left: 4px solid var(--color-primary);">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Ingeniería en Software</h3>
+                <p class="timeline-subtitle">Universidad Estatal de Milagro (UNEMI)</p>
+              </div>
+              <span class="timeline-period">2021 - Presente (8vo Semestre)</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Formación superior orientada al ciclo de vida del software, bases de datos relacionales, computación en la nube, metodologías ágiles e inteligencia artificial.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Bachiller Técnico en Informática</h3>
+                <p class="timeline-subtitle">Unidad Educativa Naranjito</p>
+              </div>
+              <span class="timeline-period">Completado</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Bachillerato enfocado en soporte técnico, programación básica, mantenimiento y redes locales.
+            </p>
+          </article>
+        </div>
+
+        <!-- Certificaciones Grid -->
+        <h3 style="text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: var(--space-md);">
+          Certificaciones Profesionales en Cloud
+        </h3>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h4 style="font-weight: 700; font-size: 1rem;">Cloud Computing Desde Cero</h4>
+            <p style="font-size: 0.8125rem; color: var(--color-primary); font-weight: 600;">UNEMI</p>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.25rem;">40 Horas de Acreditación (2025)</p>
+          </div>
+
+          <div class="cert-card">
+            <h4 style="font-weight: 700; font-size: 1rem;">AWS Academy Cloud Foundations</h4>
+            <p style="font-size: 0.8125rem; color: var(--color-primary); font-weight: 600;">AWS Academy</p>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.25rem;">20 Horas de Formación Oficial (2025)</p>
+          </div>
+
+          <div class="cert-card">
+            <h4 style="font-weight: 700; font-size: 1rem;">Introducción a Google Cloud Platform</h4>
+            <p style="font-size: 0.8125rem; color: var(--color-primary); font-weight: 600;">UNEMI / GCP</p>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.25rem;">40 Horas de Formación (2026)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: DESIGN SYSTEM / COMPONENTES -->
+    <section id="design-system" class="section" aria-labelledby="ds-title" style="background-color: var(--color-surface-hover);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">🎨 Documentación Visual</span>
+          <h2 id="ds-title" class="section-title">Design System / Componentes</h2>
+          <p class="section-description">
+            Decisiones de diseño centralizadas mediante CSS Custom Properties y componentes reutilizables utilizados en todo el sitio web.
+          </p>
+        </header>
+
+        <!-- 1. Paleta de Colores -->
+        <article class="ds-block">
+          <div class="ds-block-header">
+            <h3 style="font-size: 1.5rem; font-weight: 800;">1. Paleta de Colores y Tokens</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Variables CSS para temas claro y oscuro. Haz clic en las muestras para copiar su valor HEX.
+            </p>
+          </div>
+
+          <div class="ds-color-grid">
+            <!-- Primary -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #2563eb;" data-hex="#2563eb">Claro</div>
+                <div class="ds-swatch" style="background-color: #3b82f6;" data-hex="#3b82f6">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Primary (Brand)</h4>
+              <code class="ds-color-var">--color-primary</code>
+              <div class="ds-color-values">
+                <span>#2563eb / #3b82f6</span>
+                <span>Copiar</span>
+              </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #7c3aed;" data-hex="#7c3aed">Claro</div>
+                <div class="ds-swatch" style="background-color: #8b5cf6;" data-hex="#8b5cf6">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Secondary</h4>
+              <code class="ds-color-var">--color-secondary</code>
+              <div class="ds-color-values">
+                <span>#7c3aed / #8b5cf6</span>
+                <span>Copiar</span>
+              </div>
+            </div>
+
+            <!-- Background -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #f8fafc; color: #0f172a; text-shadow: none;" data-hex="#f8fafc">Claro</div>
+                <div class="ds-swatch" style="background-color: #0b0f19;" data-hex="#0b0f19">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Background</h4>
+              <code class="ds-color-var">--color-background</code>
+              <div class="ds-color-values">
+                <span>#f8fafc / #0b0f19</span>
+                <span>Copiar</span>
+              </div>
+            </div>
+
+            <!-- Surface -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #ffffff; color: #0f172a; text-shadow: none;" data-hex="#ffffff">Claro</div>
+                <div class="ds-swatch" style="background-color: #111827;" data-hex="#111827">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Surface / Card</h4>
+              <code class="ds-color-var">--color-surface</code>
+              <div class="ds-color-values">
+                <span>#ffffff / #111827</span>
+                <span>Copiar</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Tipografía -->
+        <article class="ds-block">
+          <div class="ds-block-header">
+            <h3 style="font-size: 1.5rem; font-weight: 800;">2. Escala Tipográfica</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Jerarquía de encabezados, textos y enlaces con fuentes del sistema de alto rendimiento.
+            </p>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Encabezado &lt;h1&gt;</strong><br>
+              3.5rem (56px) / 900
+            </div>
+            <div>
+              <p style="font-size: 2.25rem; font-weight: 900; line-height: 1.2;">Jostin Fernando Chalan Mora</p>
+            </div>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Encabezado &lt;h2&gt;</strong><br>
+              2.25rem (36px) / 800
+            </div>
+            <div>
+              <p style="font-size: 1.75rem; font-weight: 800;">Proyectos Destacados</p>
+            </div>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Encabezado &lt;h3&gt;</strong><br>
+              1.25rem (20px) / 700
+            </div>
+            <div>
+              <p style="font-size: 1.25rem; font-weight: 700;">EcoScam - Clasificación Inteligente de Residuos</p>
+            </div>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Párrafo Regular &lt;p&gt;</strong><br>
+              1rem (16px) / 400
+            </div>
+            <div>
+              <p style="color: var(--color-text-muted);">
+                Estudiante de 8vo semestre de Ingeniería en Software en UNEMI, especializado en soluciones web con React, Python y Cloud Computing.
+              </p>
+            </div>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Enlace Interactivo &lt;a&gt;</strong><br>
+              0.9375rem / 600
+            </div>
+            <div>
+              <a href="#design-system" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">
+                Ver documentación del sistema de diseño →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Escala de Espaciado -->
+        <article class="ds-block">
+          <div class="ds-block-header">
+            <h3 style="font-size: 1.5rem; font-weight: 800;">3. Escala de Espaciado (Tokens de Layout)</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Métricas aplicadas consistentemente en paddings, márgenes y gaps.
+            </p>
+          </div>
+
+          <div class="ds-spacing-item">
+            <div class="ds-typo-meta">
+              <code>--space-xs</code> (0.25rem / 4px)
+            </div>
+            <div>
+              <div class="ds-spacing-bar" style="width: 4px;"></div>
+            </div>
+          </div>
+
+          <div class="ds-spacing-item">
+            <div class="ds-typo-meta">
+              <code>--space-sm</code> (0.5rem / 8px)
+            </div>
+            <div>
+              <div class="ds-spacing-bar" style="width: 8px;"></div>
+            </div>
+          </div>
+
+          <div class="ds-spacing-item">
+            <div class="ds-typo-meta">
+              <code>--space-md</code> (1rem / 16px)
+            </div>
+            <div>
+              <div class="ds-spacing-bar" style="width: 16px;"></div>
+            </div>
+          </div>
+
+          <div class="ds-spacing-item">
+            <div class="ds-typo-meta">
+              <code>--space-lg</code> (2rem / 32px)
+            </div>
+            <div>
+              <div class="ds-spacing-bar" style="width: 32px;"></div>
+            </div>
+          </div>
+
+          <div class="ds-spacing-item">
+            <div class="ds-typo-meta">
+              <code>--space-xl</code> (3rem / 48px)
+            </div>
+            <div>
+              <div class="ds-spacing-bar" style="width: 48px;"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Componentes Reales -->
+        <article class="ds-block">
+          <div class="ds-block-header">
+            <h3 style="font-size: 1.5rem; font-weight: 800;">4. Componentes Reutilizables</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Ejemplos funcionales de los botones, insignias y formularios que componen el portafolio.
+            </p>
+          </div>
+
+          <div class="ds-components-grid">
+            <!-- Botones -->
+            <div class="ds-component-box">
+              <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-sm);">Botones de Acción</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <button type="button" class="btn btn-primary">Botón Primario</button>
+                <button type="button" class="btn btn-secondary">Botón Secundario</button>
+                <button type="button" class="btn btn-outline">Botón Outline</button>
+              </div>
+            </div>
+
+            <!-- Badges -->
+            <div class="ds-component-box">
+              <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-sm);">Badges y Etiquetas</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                <span class="skill-badge badge-avanzado">Nivel Avanzado</span>
+                <span class="skill-badge badge-intermedio">Nivel Intermedio</span>
+                <span class="skill-badge badge-basico">Nivel Básico</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Python</span>
+              </div>
+            </div>
+
+            <!-- Inputs -->
+            <div class="ds-component-box">
+              <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-sm);">Campo de Entrada &lt;input&gt;</h4>
+              <label for="sample-input" class="form-label">Nombre del Destinatario</label>
+              <input type="text" id="sample-input" class="form-control" value="Ing. Evaluador" placeholder="Escribe un valor...">
+            </div>
+
+            <!-- Textarea -->
+            <div class="ds-component-box">
+              <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-sm);">Área de Texto &lt;textarea&gt;</h4>
+              <label for="sample-textarea" class="form-label">Mensaje Informativo</label>
+              <textarea id="sample-textarea" rows="2" class="form-control" placeholder="Escribe tu mensaje...">Componente con focus ring y tamaño fluido.</textarea>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO -->
+    <section id="contacto" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Canales Directos</span>
+          <h2 id="contact-title" class="section-title">Contacto Profesional</h2>
+          <p class="section-description">
+            ¿Deseas colaborar en un proyecto o agendar una entrevista? Envíame un mensaje y te responderé a la brevedad.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Canales de Información -->
+          <aside class="contact-info-card" aria-label="Información de contacto">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Información de Contacto</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Disponible para prácticas empresariales, desarrollo de proyectos freelance o charlas tecnológicas.
+            </p>
+
+            <div class="contact-channels">
+              <a href="mailto:jostinmora740@gmail.com" class="contact-channel-item">
+                <div class="channel-icon">✉️</div>
+                <div>
+                  <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 600;">Correo Electrónico</span>
+                  <span style="font-weight: 700; font-size: 0.9375rem;">jostinmora740@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://wa.me/593980601334" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon">💬</div>
+                <div>
+                  <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 600;">WhatsApp Directo</span>
+                  <span style="font-weight: 700; font-size: 0.9375rem;">+593 98 060 1334</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/Jostinchalan" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon">🐙</div>
+                <div>
+                  <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 600;">GitHub Perfil</span>
+                  <span style="font-weight: 700; font-size: 0.9375rem;">github.com/Jostinchalan</span>
+                </div>
+              </a>
+
+              <div class="contact-channel-item">
+                <div class="channel-icon">📍</div>
+                <div>
+                  <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 600;">Ubicación</span>
+                  <span style="font-weight: 700; font-size: 0.9375rem;">Naranjito, Guayas, Ecuador</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Formulario Semántico con Validación -->
+          <article class="contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Envíame un Mensaje</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+              Completa los campos del formulario. Validación activa con JavaScript en tiempo real.
+            </p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nombre Completo *</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+                <div id="error-name" class="form-error" style="display: none;"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Correo Electrónico *</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="carlos@ejemplo.com" required>
+                <div id="error-email" class="form-error" style="display: none;"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Asunto del Mensaje *</label>
+                <input type="text" id="contact-subject" name="subject" class="form-control" placeholder="Ej. Oportunidad de Prácticas / Proyecto" required>
+                <div id="error-subject" class="form-error" style="display: none;"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Mensaje *</label>
+                <textarea id="contact-message" name="message" rows="4" class="form-control" placeholder="Describe brevemente tu propuesta o consulta..." required></textarea>
+                <div id="error-message" class="form-error" style="display: none;"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
+                Enviar Mensaje
+              </button>
+
+              <div id="form-success-alert" class="form-alert-success" style="display: none;" role="alert">
+                <span>✓</span>
+                <span>¡Mensaje validado y enviado con éxito! Jostin te contactará lo más pronto posible.</span>
+              </div>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       3. MODAL INTERACTIVO DE PROYECTO
+       ======================================================================= -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <figure class="modal-figure">
+        <img id="modal-img" src="" alt="" class="project-img">
+        <figcaption id="modal-category" class="project-category-tag"></figcaption>
+      </figure>
+
+      <div class="modal-body">
+        <div>
+          <h3 id="modal-title" style="font-size: 1.5rem; font-weight: 800; color: var(--color-text); margin-bottom: 0.5rem;"></h3>
+          <p id="modal-desc" style="font-size: 0.9375rem; color: var(--color-text-muted);"></p>
+        </div>
+
+        <div class="problem-box" style="margin: 0;">
+          <span class="problem-box-title">Problema o Necesidad que Resuelve:</span>
+          <p id="modal-problem" class="problem-box-text"></p>
+        </div>
+
+        <div style="background-color: var(--color-primary-light); padding: 0.8rem; border-radius: var(--radius-md);">
+          <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.2rem;">
+            Solución Implementada:
+          </span>
+          <p id="modal-solution" style="font-size: 0.8125rem; color: var(--color-text);"></p>
+        </div>
+
+        <div>
+          <span style="display: block; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: var(--color-text); margin-bottom: 0.4rem;">
+            Tecnologías Utilizadas:
+          </span>
+          <div id="modal-techs" class="tech-tags"></div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm); border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+          <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Ver Código en GitHub
+          </a>
+          <a id="modal-demo" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Ver Demo Desplegada
+          </a>
+          <button type="button" id="modal-close-action" class="btn btn-outline" style="margin-left: auto;">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Volver Arriba -->
+  <button type="button" id="scroll-top-btn" class="scroll-top-btn" aria-label="Volver arriba">
+    ↑
+  </button>
+
+  <!-- =======================================================================
+       4. PIE DE PÁGINA (FOOTER)
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 0.75rem;">
+            <span class="brand-badge">JC</span>
+            <span>Jostin Fernando Chalan Mora</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.875rem; max-width: 480px; line-height: 1.6;">
+            Estudiante de 8vo semestre de Ingeniería en Software en la Universidad Estatal de Milagro (UNEMI). Comprometido con la excelencia académica, el código estructurado y la computación en la nube.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: var(--space-md);">
+            Navegación
+          </h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.875rem; color: #94a3b8;">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: var(--space-md);">
+            Sistema
+          </h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.875rem; color: #94a3b8;">
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#design-system">Design System</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Jostin Fernando Chalan Mora. Desarrollado con HTML5 semántico, CSS Custom Properties y JavaScript.</p>
+        <p>Universidad Estatal de Milagro (UNEMI) • Naranjito, Ecuador</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript (Separación de Comportamiento) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
