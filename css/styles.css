@@ -409,21 +409,48 @@ ul, ol {
   align-items: flex-end;
 }
 
-.hero-ambient-glow {
+/* Fondo suave para fotos en tema claro (Tono plomo / ceniza) */
+.hero-photo-wrapper::before {
+  content: '';
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-  filter: blur(40px);
+  height: 380px;
+  border-radius: 48% 48% 44% 44%;
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.42) 0%, rgba(203, 213, 225, 0.48) 50%, rgba(226, 232, 240, 0.25) 80%, transparent 100%);
+  filter: blur(16px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-photo-wrapper::before {
+  display: none;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 370px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(100, 116, 139, 0.22) 0%,
+    rgba(148, 163, 184, 0.38) 35%,
+    rgba(203, 213, 225, 0.4) 60%,
+    transparent 80%
+  );
+  filter: blur(28px);
   z-index: 0;
   pointer-events: none;
 }
 
 [data-theme="dark"] .hero-ambient-glow {
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 70%);
+  filter: blur(40px);
 }
 
 .hero-photo {
@@ -524,136 +551,338 @@ ul, ol {
 }
 
 /* ==========================================================================
-   4. SECCIÓN SOBRE MÍ
+   4. SECCIÓN SOBRE MÍ (INSPIRADO EN DISEÑO MINIMALISTA DE AUTOR)
    ========================================================================== */
+.about-section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
 .about-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: var(--space-xl);
-  align-items: start;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 3.5rem;
+  align-items: center;
 }
 
-.about-card {
-  background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-card);
-}
-
-.about-avatar-mini {
-  width: 6.5rem;
-  height: 6.5rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  margin: 0 auto var(--space-sm) auto;
-  border: 3px solid var(--color-primary-light);
-}
-
-.facts-list {
-  margin-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-md);
-}
-
-.fact-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.875rem;
-}
-
-.fact-item:last-child {
-  border-bottom: none;
-}
-
-.fact-label {
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-.fact-value {
-  font-weight: 600;
+.about-main-heading {
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: var(--color-text);
-  text-align: right;
+  margin-bottom: 1.5rem;
 }
 
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-.bio-text {
+.about-bio-text {
   color: var(--color-text-muted);
   font-size: 1.0625rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  margin-bottom: 2rem;
 }
 
-.bio-text p {
-  margin-bottom: var(--space-md);
+.about-bio-text p {
+  margin-bottom: 1.15rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-.bio-text strong {
+.about-bio-text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Subsección de tecnologías estilo checklist */
+.about-tech-section {
+  margin-bottom: 2rem;
+}
+
+.about-tech-intro {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.about-tech-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem 1.5rem;
+  list-style: none;
+}
+
+.about-tech-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--color-text);
 }
 
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-}
-
-.pillar-card {
-  background-color: var(--color-surface-hover);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
+.checklist-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  background-color: rgba(16, 185, 129, 0.14);
+  border: 1.5px solid rgba(16, 185, 129, 0.45);
+  border-radius: 5px;
+  color: #10b981;
+  flex-shrink: 0;
   transition: transform var(--transition-fast);
 }
 
-.pillar-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-primary);
+.about-tech-checklist li:hover .checklist-icon {
+  transform: scale(1.15);
+  background-color: rgba(16, 185, 129, 0.25);
 }
 
-.pillar-title {
+[data-theme="dark"] .checklist-icon {
+  background-color: rgba(16, 185, 129, 0.2);
+  border-color: rgba(52, 211, 153, 0.55);
+  color: #34d399;
+}
+
+/* Fila de metadatos rápidos */
+.about-meta-row {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: 0.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
 }
 
-.pillar-desc {
+.about-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
   font-size: 0.8125rem;
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.about-meta-chip:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.meta-chip-svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+[data-theme="dark"] .meta-chip-svg {
+  color: #38bdf8;
+}
+
+.meta-chip-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.meta-chip-val {
   color: var(--color-text-muted);
 }
 
-.values-banner {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: #ffffff;
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+.chip-status {
+  border-color: rgba(16, 185, 129, 0.35);
+  background-color: rgba(16, 185, 129, 0.08);
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  margin-top: var(--space-md);
+.chip-status .meta-chip-val {
+  color: var(--color-success);
+  font-weight: 600;
 }
 
-.value-item {
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseStatusDot 2s infinite;
+}
+
+@keyframes pulseStatusDot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Columna de Fotografía y Placeholder */
+.about-media-column {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Fondo suave para la foto de Sobre Mí en tema claro (Tono plomo / ceniza) */
+.about-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 380px;
+  border-radius: 48% 48% 44% 44%;
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.42) 0%, rgba(203, 213, 225, 0.48) 50%, rgba(226, 232, 240, 0.25) 80%, transparent 100%);
+  filter: blur(16px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .about-photo-wrapper::before {
+  display: none;
+}
+
+.about-ambient-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 390px;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(100, 116, 139, 0.22) 0%,
+    rgba(148, 163, 184, 0.38) 35%,
+    rgba(203, 213, 225, 0.4) 60%,
+    transparent 80%
+  );
+  filter: blur(28px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .about-ambient-glow {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.about-photo-slot {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-photo-img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 78%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 78%, rgba(0, 0, 0, 0) 100%);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.12));
+  transition: transform var(--transition-normal);
+}
+
+.about-photo-img:hover {
+  transform: scale(1.02);
+}
+
+.about-photo-placeholder-tag {
+  position: absolute;
+  bottom: 12px;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-photo-placeholder-tag .tag-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: pulseTag 2s infinite;
+}
+
+@keyframes pulseTag {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+/* Responsivo para sección Sobre Mí */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-media-column {
+    order: -1;
+  }
+
+  .about-photo-wrapper {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-tech-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .about-main-heading {
+    font-size: 1.875rem;
+  }
 }
 
 /* ==========================================================================
