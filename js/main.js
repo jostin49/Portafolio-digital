@@ -22,7 +22,7 @@ function initTheme() {
   const toggleBtn = document.getElementById('theme-toggle');
   if (!toggleBtn) return;
 
-  const currentTheme = localStorage.getItem('theme') || 
+  const currentTheme = localStorage.getItem('theme') ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
   applyTheme(currentTheme);
@@ -104,12 +104,61 @@ function initProjectFilter() {
 }
 
 /* ==========================================================================
-   4. FILTRADO INTERACTIVO DE HABILIDADES
+   4. FILTRADO INTERACTIVO DE HABILIDADES Y ACORDEÓN DE CATEGORÍAS
    ========================================================================== */
 function initSkillFilter() {
   const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
-  const skillCards = document.querySelectorAll('.skill-card');
+  const categoryCards = document.querySelectorAll('.category-skill-card');
 
+  // Alternar apertura/cierre de tarjeta de categoría
+  function toggleCategoryCard(card, forceState = null) {
+    const header = card.querySelector('.category-header');
+    const details = card.querySelector('.category-details');
+    const expandText = card.querySelector('.expand-text');
+    if (!details) return;
+
+    const isOpen = card.classList.contains('is-open');
+    const targetState = forceState !== null ? forceState : !isOpen;
+
+    if (targetState) {
+      card.classList.add('is-open');
+      details.hidden = false;
+      if (header) header.setAttribute('aria-expanded', 'true');
+      if (expandText) expandText.textContent = 'Ocultar';
+    } else {
+      card.classList.remove('is-open');
+      details.hidden = true;
+      if (header) header.setAttribute('aria-expanded', 'false');
+      if (expandText) expandText.textContent = 'Ver más';
+    }
+  }
+
+  // Asignar eventos de clic y teclado a cada tarjeta
+  categoryCards.forEach(card => {
+    const header = card.querySelector('.category-header');
+    const pills = card.querySelector('.category-pills');
+
+    if (header) {
+      header.addEventListener('click', () => {
+        toggleCategoryCard(card);
+      });
+
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCategoryCard(card);
+        }
+      });
+    }
+
+    if (pills) {
+      pills.addEventListener('click', () => {
+        toggleCategoryCard(card, true);
+      });
+    }
+  });
+
+  // Filtros superiores
   skillFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       skillFilterBtns.forEach(b => b.classList.remove('active'));
@@ -117,10 +166,13 @@ function initSkillFilter() {
 
       const category = btn.getAttribute('data-category');
 
-      skillCards.forEach(card => {
+      categoryCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
+        if (category === 'all') {
           card.style.display = 'flex';
+        } else if (cardCat === category) {
+          card.style.display = 'flex';
+          toggleCategoryCard(card, true);
         } else {
           card.style.display = 'none';
         }
