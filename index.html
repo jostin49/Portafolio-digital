@@ -139,7 +139,6 @@
         <header class="section-header">
           <span class="section-tag">Conoce un poco mas de mi</span>
         </header>
-
         <div class="about-grid">
           <!-- Columna Izquierda: Narrativa, Checklist y Metadatos -->
           <div class="about-content-column">
@@ -1020,203 +1019,72 @@
           </p>
         </header>
 
-        <!-- Filtros de Proyectos -->
-        <nav class="filter-nav" aria-label="Filtro de proyectos">
-          <button type="button" class="filter-btn project-filter-btn active" data-category="all">Todos</button>
-          <button type="button" class="filter-btn project-filter-btn" data-category="Eco-Tech / AI">Eco-Tech /
-            AI</button>
-          <button type="button" class="filter-btn project-filter-btn" data-category="Web Application">Web
-            Application</button>
-          <button type="button" class="filter-btn project-filter-btn" data-category="E-commerce">E-commerce</button>
-          <button type="button" class="filter-btn project-filter-btn" data-category="Open Source">Open Source</button>
-        </nav>
-
-        <!-- Grid de Proyectos -->
-        <div class="projects-grid">
-          <!-- Proyecto 1: EcoScam -->
-          <article class="project-card" data-category="Eco-Tech / AI">
-            <div>
-              <figure class="project-figure">
-                <img src="assets/EcoScam.png" alt="Captura del proyecto EcoScam" class="project-img contain">
-                <figcaption class="project-category-tag">Eco-Tech / AI</figcaption>
-              </figure>
-              <div class="project-body">
-                <h3 class="project-title">EcoScam - Clasificación de Residuos</h3>
-                <p class="project-desc">Sistema inteligente de separación y clasificación de desechos sólidos mediante
-                  inteligencia artificial.</p>
-                <div class="problem-box">
-                  <span class="problem-box-title">Problema que resuelve:</span>
-                  <p class="problem-box-text">La baja tasa de reciclaje y la contaminación urbana provocada por la falta
-                    de separación correcta de residuos en origen.</p>
-                </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Machine Learning</span>
-                  <span class="tech-tag">TensorFlow</span>
-                  <span class="tech-tag">Web</span>
-                </div>
+        <!-- Showcase Hub con botón "Ver Proyectos" -->
+        <div class="projects-showcase-hub">
+          <div class="showcase-teaser-grid">
+            <!-- Teaser 1: EcoScam -->
+            <div class="showcase-teaser-card" data-project-id="ecosam" title="Clic para explorar EcoScam">
+              <div class="teaser-logo-wrap">
+                <img src="assets/EcoScam.png" alt="EcoScam" class="teaser-logo">
               </div>
-            </div>
-            <div class="project-footer">
-              <button type="button" class="btn btn-outline open-modal-btn" data-project="ecosam"
-                style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg><span>Ver Detalles</span>
-              </button>
-              <a href="https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos" target="_blank"
-                rel="noopener noreferrer" class="btn btn-secondary"
-                style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                </svg><span>Código GitHub</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Proyecto 2: CUENTIA -->
-          <article class="project-card" data-category="Web Application">
-            <div>
-              <figure class="project-figure">
-                <img src="assets/CuentIA.png" alt="Captura del proyecto CUENTIA" class="project-img">
-                <figcaption class="project-category-tag">Web Application</figcaption>
-              </figure>
-              <div class="project-body">
-                <h3 class="project-title">CUENTIA - Gestión Contable</h3>
-                <p class="project-desc">Sistema web integral de administración de cuentas, balance de ingresos/gastos y
-                  conciliación.</p>
-                <div class="problem-box">
-                  <span class="problem-box-title">Problema que resuelve:</span>
-                  <p class="problem-box-text">Descontrol financiero y pérdida de trazabilidad contable en pequeños
-                    negocios que dependen de registros en papel o Excel desarticulados.</p>
-                </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Django</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">JavaScript</span>
-                </div>
+              <div class="teaser-info">
+                <h4>EcoScam</h4>
+                <span>Eco-Tech / AI</span>
               </div>
+              <span class="teaser-arrow">→</span>
             </div>
-            <div class="project-footer">
-              <button type="button" class="btn btn-outline open-modal-btn" data-project="cuentia"
-                style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg><span>Ver Detalles</span>
-              </button>
-              <a href="https://github.com/Jostinchalan/CUENTIA.git" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                </svg><span>Código GitHub</span>
-              </a>
-            </div>
-          </article>
 
-          <!-- Proyecto 3: AgroMercado -->
-          <article class="project-card" data-category="E-commerce">
-            <div>
-              <figure class="project-figure">
-                <img src="assets/AgroMercado.png" alt="Captura del proyecto AgroMercado" class="project-img">
-                <figcaption class="project-category-tag">E-commerce</figcaption>
-              </figure>
-              <div class="project-body">
-                <h3 class="project-title">AgroMercado - Venta Directa</h3>
-                <p class="project-desc">Marketplace digital para conectar agricultores con compradores directos sin
-                  intermediarios abusivos.</p>
-                <div class="problem-box">
-                  <span class="problem-box-title">Problema que resuelve:</span>
-                  <p class="problem-box-text">Intermediación excesiva en el canal agropecuario que reduce los ingresos
-                    del campesino y encarece el producto para las familias.</p>
-                </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Tailwind CSS</span>
-                  <span class="tech-tag">Vercel</span>
-                </div>
+            <!-- Teaser 2: CUENTIA -->
+            <div class="showcase-teaser-card" data-project-id="cuentia" title="Clic para explorar CUENTIA">
+              <div class="teaser-logo-wrap">
+                <img src="assets/CuentIA.png" alt="CUENTIA" class="teaser-logo">
               </div>
+              <div class="teaser-info">
+                <h4>CUENTIA</h4>
+                <span>Web Application</span>
+              </div>
+              <span class="teaser-arrow">→</span>
             </div>
-            <div class="project-footer">
-              <button type="button" class="btn btn-outline open-modal-btn" data-project="agromercado"
-                style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg><span>Ver Detalles</span>
-              </button>
-              <a href="https://agro-mercado.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg><span>Demo en Vivo</span>
-              </a>
-            </div>
-          </article>
 
-          <!-- Proyecto 4: GUIOSPRO-FLOSS -->
-          <article class="project-card" data-category="Open Source">
-            <div>
-              <figure class="project-figure">
-                <img src="assets/GuiosPro.png" alt="Captura de GUIOSPRO-FLOSS" class="project-img contain">
-                <figcaption class="project-category-tag">Open Source</figcaption>
-              </figure>
-              <div class="project-body">
-                <h3 class="project-title">GUIOSPRO-FLOSS</h3>
-                <p class="project-desc">Plataforma colaborativa para el ecosistema de Software Libre y Código Abierto
-                  para estudiantes.</p>
-                <div class="problem-box">
-                  <span class="problem-box-title">Problema que resuelve:</span>
-                  <p class="problem-box-text">Falta de recursos pedagógicos centralizados en español que orienten a los
-                    nuevos desarrolladores en buenas prácticas de código abierto.</p>
-                </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Next.js</span>
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">FLOSS</span>
-                </div>
+            <!-- Teaser 3: AgroMercado -->
+            <div class="showcase-teaser-card" data-project-id="agromercado" title="Clic para explorar AgroMercado">
+              <div class="teaser-logo-wrap">
+                <img src="assets/AgroMercado.png" alt="AgroMercado" class="teaser-logo">
               </div>
+              <div class="teaser-info">
+                <h4>AgroMercado</h4>
+                <span>E-commerce</span>
+              </div>
+              <span class="teaser-arrow">→</span>
             </div>
-            <div class="project-footer">
-              <button type="button" class="btn btn-outline open-modal-btn" data-project="guiospro"
-                style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg><span>Ver Detalles</span>
-              </button>
-              <a href="https://guiospro-floss-1vve.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8125rem;">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg><span>Demo en Vivo</span>
-              </a>
+
+            <!-- Teaser 4: GUIOSPRO-FLOSS -->
+            <div class="showcase-teaser-card" data-project-id="guiospro" title="Clic para explorar GUIOSPRO">
+              <div class="teaser-logo-wrap">
+                <img src="assets/GuiosPro.png" alt="GUIOSPRO-FLOSS" class="teaser-logo">
+              </div>
+              <div class="teaser-info">
+                <h4>GUIOSPRO</h4>
+                <span>Open Source</span>
+              </div>
+              <span class="teaser-arrow">→</span>
             </div>
-          </article>
+          </div>
+
+          <!-- Botón de acción principal solicitado -->
+          <div class="showcase-action-wrap">
+            <button type="button" id="open-projects-catalog-btn" class="btn btn-hero-primary btn-projects-launcher">
+              <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Ver Proyectos (4)</span>
+            </button>
+            <p class="showcase-note">Haz clic para abrir la ventana con todos los proyectos, filtros por categoría y especificaciones completas.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1788,75 +1656,187 @@
   </main>
 
   <!-- =======================================================================
-       3. MODAL INTERACTIVO DE PROYECTO
+       3. VENTANA MODAL: CATÁLOGO COMPLETO DE PROYECTOS
        ======================================================================= -->
-  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-dialog">
-      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <figure class="modal-figure">
-        <img id="modal-img" src="" alt="" class="project-img">
-        <figcaption id="modal-category" class="project-category-tag"></figcaption>
-      </figure>
-
-      <div class="modal-body">
+  <div id="projects-catalog-modal" class="modal-backdrop catalog-backdrop" role="dialog" aria-modal="true"
+    aria-labelledby="catalog-modal-title" hidden>
+    <div class="modal-dialog catalog-dialog">
+      <header class="catalog-modal-header">
         <div>
-          <h3 id="modal-title"
-            style="font-size: 1.5rem; font-weight: 800; color: var(--color-text); margin-bottom: 0.5rem;"></h3>
-          <p id="modal-desc" style="font-size: 0.9375rem; color: var(--color-text-muted);"></p>
+          <span class="section-tag" style="margin-bottom: 0.25rem;">Catálogo Completo</span>
+          <h3 id="catalog-modal-title" class="catalog-title">Proyectos & Especificaciones</h3>
+          <p class="catalog-subtitle">Explora el código fuente, la arquitectura técnica y las soluciones de cada proyecto.</p>
         </div>
+        <button type="button" id="close-catalog-modal-btn" class="modal-close-btn" aria-label="Cerrar catálogo de proyectos">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
 
-        <div class="problem-box" style="margin: 0;">
-          <span class="problem-box-title">Problema o Necesidad que Resuelve:</span>
-          <p id="modal-problem" class="problem-box-text"></p>
-        </div>
+      <!-- Filtros por categoría dentro de la ventana de proyectos -->
+      <nav class="filter-nav catalog-filter-nav" aria-label="Filtro de proyectos en modal">
+        <button type="button" class="filter-btn project-filter-btn active" data-category="all">Todos (4)</button>
+        <button type="button" class="filter-btn project-filter-btn" data-category="Eco-Tech / AI">Eco-Tech / AI</button>
+        <button type="button" class="filter-btn project-filter-btn" data-category="Web Application">Web Application</button>
+        <button type="button" class="filter-btn project-filter-btn" data-category="E-commerce">E-commerce</button>
+        <button type="button" class="filter-btn project-filter-btn" data-category="Open Source">Open Source</button>
+      </nav>
 
-        <div style="background-color: var(--color-primary-light); padding: 0.8rem; border-radius: var(--radius-md);">
-          <span
-            style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.2rem;">
-            Solución Implementada:
-          </span>
-          <p id="modal-solution" style="font-size: 0.8125rem; color: var(--color-text);"></p>
-        </div>
+      <!-- Grid con las especificaciones completas de los proyectos -->
+      <div class="catalog-modal-content">
+        <div class="projects-grid catalog-grid">
+          <!-- Proyecto 1: EcoScam -->
+          <article class="project-card" data-project-id="ecosam" data-category="Eco-Tech / AI">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/EcoScam.png" alt="Logo del proyecto EcoScam" class="project-img contain">
+                <figcaption class="project-category-tag">Eco-Tech / AI</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">EcoScam - Clasificación de Residuos</h3>
+                <p class="project-desc">Sistema inteligente de separación y clasificación de desechos sólidos mediante
+                  inteligencia artificial.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">Web</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos" target="_blank"
+                rel="noopener noreferrer" class="btn btn-secondary btn-github-repo">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg><span>GitHub</span>
+              </a>
+            </div>
+          </article>
 
-        <div>
-          <span
-            style="display: block; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: var(--color-text); margin-bottom: 0.4rem;">
-            Tecnologías Utilizadas:
-          </span>
-          <div id="modal-techs" class="tech-tags"></div>
-        </div>
+          <!-- Proyecto 2: CUENTIA -->
+          <article class="project-card" data-project-id="cuentia" data-category="Web Application">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/CuentIA.png" alt="Logo del proyecto CUENTIA" class="project-img contain">
+                <figcaption class="project-category-tag">Web Application</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">CUENTIA - Gestión Contable</h3>
+                <p class="project-desc">Sistema web integral de administración de cuentas, balance de ingresos/gastos y
+                  conciliación.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Jostinchalan/CUENTIA.git" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-github-repo">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg><span>GitHub</span>
+              </a>
+            </div>
+          </article>
 
-        <div
-          style="display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-sm); border-top: 1px solid var(--color-border); padding-top: var(--space-md); align-items: center;">
-          <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-              fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg><span>Ver Código en GitHub</span>
-          </a>
-          <a id="modal-demo" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              aria-hidden="true">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg><span>Ver Demo Desplegada</span>
-          </a>
-          <button type="button" id="modal-close-action" class="btn btn-outline" style="margin-left: auto;">
-            Cerrar
-          </button>
+          <!-- Proyecto 3: AgroMercado -->
+          <article class="project-card" data-project-id="agromercado" data-category="E-commerce">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/AgroMercado.png" alt="Logo del proyecto AgroMercado" class="project-img contain">
+                <figcaption class="project-category-tag">E-commerce</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">AgroMercado - Venta Directa</h3>
+                <p class="project-desc">Marketplace digital para conectar agricultores con compradores directos sin
+                  intermediarios abusivos.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">Vercel</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Jostinchalan/AgroMercado.git" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-github-repo">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg><span>GitHub</span>
+              </a>
+              <a href="https://agro-mercado.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg><span>Visualizar</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: GUIOSPRO-FLOSS -->
+          <article class="project-card" data-project-id="guiospro" data-category="Open Source">
+            <div>
+              <figure class="project-figure">
+                <img src="assets/GuiosPro.png" alt="Logo del proyecto GUIOSPRO-FLOSS" class="project-img contain">
+                <figcaption class="project-category-tag">Open Source</figcaption>
+              </figure>
+              <div class="project-body">
+                <h3 class="project-title">GUIOSPRO-FLOSS</h3>
+                <p class="project-desc">Plataforma colaborativa para el ecosistema de Software Libre y Código Abierto
+                  para estudiantes.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">FLOSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Jostinchalan/GUIOSPRO-FLOSS" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-github-repo">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg><span>GitHub</span>
+              </a>
+              <a href="https://guiospro-floss-1vve.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary">
+                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg><span>Visualizar</span>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </div>
+
+
 
   <!-- Botón Volver Arriba -->
   <button type="button" id="scroll-top-btn" class="scroll-top-btn" aria-label="Volver arriba">

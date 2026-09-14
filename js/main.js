@@ -7,9 +7,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileMenu();
+  initProjectsCatalogModal();
   initProjectFilter();
   initSkillFilter();
-  initProjectModal();
   initContactForm();
   initScrollTop();
   initDesignSystemHelpers();
@@ -182,141 +182,66 @@ function initSkillFilter() {
 }
 
 /* ==========================================================================
-   5. MODAL INTERACTIVO DE PROYECTOS (ACCESIBLE CON TECLADO)
+   5. CONTROL DE LA VENTANA MODAL DEL CATÁLOGO DE PROYECTOS
    ========================================================================== */
-const projectData = {
-  ecosam: {
-    title: 'EcoScam - Clasificación Inteligente de Residuos',
-    category: 'Eco-Tech / AI',
-    image: 'assets/EcoScam.png',
-    contain: true,
-    description: 'Aplicación innovadora enfocada en la clasificación inteligente de residuos para promover el reciclaje activo y la educación ecológica.',
-    problem: 'Baja tasa de reciclaje urbano y contaminación de vertederos debido a la falta de separación correcta en hogares y colegios.',
-    solution: 'Algoritmo de visión artificial y machine learning que identifica el tipo de residuo en tiempo real y ofrece instrucciones pedagógicas para su correcta reutilización.',
-    technologies: ['Python', 'Machine Learning', 'TensorFlow', 'CSS3', 'Web'],
-    github: 'https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos',
-    demo: '#'
-  },
-  cuentia: {
-    title: 'CUENTIA - Sistema de Gestión Contable',
-    category: 'Web Application',
-    image: 'assets/CuentIA.png',
-    contain: false,
-    description: 'Sistema web robusto para la administración de ingresos, egresos, conciliación bancaria y facturación segura en tiempo real.',
-    problem: 'Pérdida de trazabilidad económica y vulnerabilidades de seguridad en microempresas que llevan sus cuentas en planillas manuales.',
-    solution: 'Arquitectura modular con Django y PostgreSQL que implementa autenticación multiusuario con roles (RBAC) y reportes contables automáticos.',
-    technologies: ['Django', 'Python', 'JavaScript', 'PostgreSQL', 'CSS3'],
-    github: 'https://github.com/Jostinchalan/CUENTIA.git',
-    demo: '#'
-  },
-  agromercado: {
-    title: 'AgroMercado - Plataforma Agrícola Directa',
-    category: 'E-commerce',
-    image: 'assets/AgroMercado.png',
-    contain: false,
-    description: 'Plataforma de comercio electrónico diseñada para enlazar a pequeños agricultores con compradores directos a precios justos.',
-    problem: 'Intermediación abusiva que castiga los ingresos del campesino y encarece la canasta básica familiar.',
-    solution: 'Mercado virtual directo con catálogo dinámico de cosechas, geolocalización de parcelas y contacto inmediato vía WhatsApp.',
-    technologies: ['React', 'Node.js', 'Tailwind CSS', 'Vite', 'TypeScript'],
-    github: 'https://github.com/Jostinchalan/AgroMercado.git',
-    demo: 'https://agro-mercado.vercel.app/'
-  },
-  guiospro: {
-    title: 'GUIOSPRO-FLOSS - Hub de Software Libre',
-    category: 'Open Source',
-    image: 'assets/GuiosPro.png',
-    contain: true,
-    description: 'Portal pedagógico y comunitario enfocado en la promoción, uso y contribución activa a proyectos de software libre (FLOSS).',
-    problem: 'Desorientación de estudiantes y noveles desarrolladores para participar en comunidades abiertas y comprender licencias libres.',
-    solution: 'Hub interactivo con rutas de aprendizaje, guías de contribución a GitHub y directorio clasificado de herramientas FLOSS.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Vercel'],
-    github: 'https://github.com/Jostinchalan/GUIOSPRO-FLOSS',
-    demo: 'https://guiospro-floss-1vve.vercel.app/'
-  }
-};
+function initProjectsCatalogModal() {
+  const catalogModal = document.getElementById('projects-catalog-modal');
+  const openBtn = document.getElementById('open-projects-catalog-btn');
+  const closeBtn = document.getElementById('close-catalog-modal-btn');
+  const teaserCards = document.querySelectorAll('.showcase-teaser-card');
 
-function initProjectModal() {
-  const backdrop = document.getElementById('project-modal');
-  const closeBtn = document.getElementById('modal-close-btn');
-  const modalCloseAction = document.getElementById('modal-close-action');
-  if (!backdrop) return;
+  if (!catalogModal) return;
 
-  document.querySelectorAll('.open-modal-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const projectId = btn.getAttribute('data-project');
-      const data = projectData[projectId];
-      if (data) {
-        populateModal(data);
-        openModal(backdrop);
+  const openCatalog = (targetProjectId = null) => {
+    catalogModal.classList.add('is-active');
+    catalogModal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+
+    if (targetProjectId) {
+      const allFilterBtn = catalogModal.querySelector('.project-filter-btn[data-category="all"]');
+      if (allFilterBtn) allFilterBtn.click();
+
+      const targetCard = catalogModal.querySelector(`.project-card[data-project-id="${targetProjectId}"]`);
+      if (targetCard) {
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
       }
-    });
-  });
+    }
+  };
 
-  const closeModal = () => {
-    backdrop.classList.remove('is-active');
+  const closeCatalog = () => {
+    catalogModal.classList.remove('is-active');
+    catalogModal.setAttribute('hidden', '');
     document.body.style.overflow = 'auto';
   };
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (modalCloseAction) modalCloseAction.addEventListener('click', closeModal);
+  if (openBtn) {
+    openBtn.addEventListener('click', () => openCatalog());
+  }
 
-  backdrop.addEventListener('click', (e) => {
-    if (e.target === backdrop) closeModal();
+  teaserCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const projId = card.getAttribute('data-project-id');
+      openCatalog(projId);
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeCatalog);
+  }
+
+  catalogModal.addEventListener('click', (e) => {
+    if (e.target === catalogModal) {
+      closeCatalog();
+    }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && backdrop.classList.contains('is-active')) {
-      closeModal();
+    if (e.key === 'Escape' && catalogModal.classList.contains('is-active')) {
+      closeCatalog();
     }
   });
-}
-
-function openModal(backdrop) {
-  backdrop.classList.add('is-active');
-  document.body.style.overflow = 'hidden';
-}
-
-function populateModal(data) {
-  document.getElementById('modal-title').textContent = data.title;
-  document.getElementById('modal-category').textContent = data.category;
-  document.getElementById('modal-desc').textContent = data.description;
-  document.getElementById('modal-problem').textContent = data.problem;
-  document.getElementById('modal-solution').textContent = data.solution;
-
-  const imgEl = document.getElementById('modal-img');
-  imgEl.src = data.image;
-  imgEl.alt = data.title;
-  if (data.contain) {
-    imgEl.classList.add('contain');
-  } else {
-    imgEl.classList.remove('contain');
-  }
-
-  const techContainer = document.getElementById('modal-techs');
-  techContainer.innerHTML = '';
-  data.technologies.forEach(tech => {
-    const span = document.createElement('span');
-    span.className = 'tech-tag';
-    span.textContent = tech;
-    techContainer.appendChild(span);
-  });
-
-  const githubBtn = document.getElementById('modal-github');
-  if (data.github && data.github !== '#') {
-    githubBtn.href = data.github;
-    githubBtn.style.display = 'inline-flex';
-  } else {
-    githubBtn.style.display = 'none';
-  }
-
-  const demoBtn = document.getElementById('modal-demo');
-  if (data.demo && data.demo !== '#') {
-    demoBtn.href = data.demo;
-    demoBtn.style.display = 'inline-flex';
-  } else {
-    demoBtn.style.display = 'none';
-  }
 }
 
 /* ==========================================================================
