@@ -1075,6 +1075,7 @@ ul, ol {
   font-size: 0.8125rem;
   font-weight: 700;
   color: var(--color-primary);
+  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
