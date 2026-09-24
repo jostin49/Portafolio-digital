@@ -237,77 +237,12 @@
         </nav>
 
         <!-- Grid de Categorías de Habilidades (Modelo Interactivo Expandible) -->
-        <div class="categories-skills-grid" id="skills-container">
+        <div class="interactive-skills-grid" id="skills-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
 
-          <!-- 1. CATEGORÍA: FRONTEND -->
-          <article class="category-skill-card" data-category="frontend">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false"
-              aria-controls="details-frontend" title="Clic para ver especificaciones de Frontend">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-frontend">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #1d4ed8;">Frontend</h3>
-                  <span class="category-count">5 tecnologías • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Previsualización de Habilidades con Logos Oficiales a Color -->
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon">
-                <span>HTML5</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon">
-                <span>CSS3</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon">
-                <span>JavaScript</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon">
-                <span>React</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon">
-                <span>Tailwind CSS</span>
-              </span>
-            </div>
-
-            <!-- Panel Desplegable con Especificaciones Detalladas -->
-            <div class="category-details" id="details-frontend" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- HTML5 -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-frontend">
                         <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon">
                       </div>
@@ -317,21 +252,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Estructuración limpia y accesible con landmarks semánticos, SEO técnico y
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Estructuración limpia y accesible con landmarks semánticos, SEO técnico y
                     microformatos.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 90%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- CSS3 -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-frontend">
                         <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon">
                       </div>
@@ -341,21 +279,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de
                     variables :root.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 85%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- JavaScript -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-frontend">
                         <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon">
                       </div>
@@ -365,21 +306,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos
                     reactivos.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 80%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- React -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-frontend">
                         <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon">
                       </div>
@@ -389,21 +333,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Componentes funcionales, hooks personalizados, estado global y ciclo de vida de
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Componentes funcionales, hooks personalizados, estado global y ciclo de vida de
                     la UI.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 75%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- Tailwind CSS -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-frontend">
                         <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon">
                       </div>
@@ -413,77 +360,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Desarrollo ágil de interfaces adaptables, diseño mobile-first y componentes con
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Desarrollo ágil de interfaces adaptables, diseño mobile-first y componentes con
                     clases utilitarias.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 80%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-
-          <!-- 2. CATEGORÍA: BACKEND -->
-          <article class="category-skill-card" data-category="backend">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false"
-              aria-controls="details-backend" title="Clic para ver especificaciones de Backend">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-backend">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #15803d;">Backend</h3>
-                  <span class="category-count">2 tecnologías • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon">
-                <span>Python</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon">
-                <span>Django & REST Framework</span>
-              </span>
-            </div>
-
-            <div class="category-details" id="details-backend" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- Python -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="backend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-backend">
                         <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon">
                       </div>
@@ -493,21 +387,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Programación orientada a objetos, scripts de automatización, Machine Learning y
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Programación orientada a objetos, scripts de automatización, Machine Learning y
                     backend.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 85%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- Django -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="backend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-backend">
                         <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon">
                       </div>
@@ -517,76 +414,23 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional.
-                  </p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>78%</span></div>
-                    <div class="skill-progress-bar">
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional.</p>
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>78%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 78%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-
-          <!-- 3. CATEGORÍA: BASES DE DATOS -->
-          <article class="category-skill-card" data-category="database">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false"
-              aria-controls="details-database" title="Clic para ver especificaciones de Bases de Datos">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-database">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #7e22ce;">Bases de Datos</h3>
-                  <span class="category-count">2 motores relacionales • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon">
-                <span>PostgreSQL</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon">
-                <span>SQL Server</span>
-              </span>
-            </div>
-
-            <div class="category-details" id="details-database" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- PostgreSQL -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="database" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-database">
                         <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon">
                       </div>
@@ -597,21 +441,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Modelado de bases de datos relacionales, normalización, índices y consultas
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Modelado de bases de datos relacionales, normalización, índices y consultas
                     complejas.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 80%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- SQL Server -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="database" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-database">
                         <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon">
                       </div>
@@ -622,74 +469,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Administración y desarrollo con Transact-SQL (T-SQL), stored procedures, vistas,
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Administración y desarrollo con Transact-SQL (T-SQL), stored procedures, vistas,
                     triggers y consistencia transaccional.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 80%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-
-          <!-- 4. CATEGORÍA: CLOUD & DEVOPS -->
-          <article class="category-skill-card" data-category="cloud">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false" aria-controls="details-cloud"
-              title="Clic para ver especificaciones de Cloud & DevOps">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-cloud">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #0e7490;">Cloud & DevOps</h3>
-                  <span class="category-count">2 tecnologías • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon">
-                <span>AWS Cloud Foundations</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon">
-                <span>Docker</span>
-              </span>
-            </div>
-
-            <div class="category-details" id="details-cloud" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- AWS -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="cloud" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-cloud">
                         <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon">
                       </div>
@@ -699,21 +496,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Certificación AWS Academy: instancias EC2, buckets S3, bases de datos RDS, IAM,
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Certificación AWS Academy: instancias EC2, buckets S3, bases de datos RDS, IAM,
                     VPC y arquitecturas de alta disponibilidad.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 75%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- Docker -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="cloud" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-cloud">
                         <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon">
                       </div>
@@ -723,80 +523,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Creación de Dockerfiles, orquestación con Docker Compose, empaquetado de
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Creación de Dockerfiles, orquestación con Docker Compose, empaquetado de
                     aplicaciones y despliegues reproducibles.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 75%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-
-          <!-- 5. CATEGORÍA: HERRAMIENTAS -->
-          <article class="category-skill-card" data-category="tools">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false" aria-controls="details-tools"
-              title="Clic para ver especificaciones de Herramientas">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-tools">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path
-                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                    </path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #b45309;">Herramientas</h3>
-                  <span class="category-count">3 herramientas • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon">
-                <span>Git</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon">
-                <span>GitHub</span>
-              </span>
-              <span class="skill-pill">
-                <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon">
-                <span>GitLab</span>
-              </span>
-            </div>
-
-            <div class="category-details" id="details-tools" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- Git -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-tools">
                         <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon">
                       </div>
@@ -806,20 +550,23 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Ramas de trabajo, pull requests, resolución de conflictos y flujo GitFlow.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
-                    <div class="skill-progress-bar">
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Ramas de trabajo, pull requests, resolución de conflictos y flujo GitFlow.</p>
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 88%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- GitHub -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-tools">
                         <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon">
                       </div>
@@ -829,21 +576,23 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Repositorios remotos, pull requests, code reviews y publicación en GitHub Pages.
-                  </p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
-                    <div class="skill-progress-bar">
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Repositorios remotos, pull requests, code reviews y publicación en GitHub Pages.</p>
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 88%;"></div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- GitLab -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+              </div>
+            </div>
+          </article>
+          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-tools">
                         <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon">
                       </div>
@@ -853,72 +602,24 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-intermedio">Intermedio</span>
-                  </div>
-                  <p class="skill-desc">Gestión del ciclo de vida del software, pipelines CI/CD, merge requests y
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Gestión del ciclo de vida del software, pipelines CI/CD, merge requests y
                     control de incidencias.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 80%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-
-          <!-- 6. CATEGORÍA: HARDWARE -->
-          <article class="category-skill-card" data-category="hardware">
-            <div class="category-header" role="button" tabindex="0" aria-expanded="false"
-              aria-controls="details-hardware" title="Clic para ver especificaciones de Hardware">
-              <div class="category-header-main">
-                <div class="category-icon-box cat-hardware">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="category-title" style="color: #b91c1c;">Hardware & Infraestructura</h3>
-                  <span class="category-count">1 especialidad • Clic para expandir</span>
-                </div>
-              </div>
-              <div class="category-expand-btn">
-                <span class="expand-text">Ver más</span>
-                <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div class="category-pills" title="Clic para ver detalles">
-              <span class="skill-pill">
-                <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon">
-                <span>Soporte Técnico de PC</span>
-              </span>
-            </div>
-
-            <div class="category-details" id="details-hardware" hidden>
-              <h4 class="category-details-heading">
-                <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Especificaciones y Nivel de Dominio
-              </h4>
-              <div class="category-skills-subgrid">
-                <!-- Soporte Técnico -->
-                <div class="skill-spec-card">
-                  <div class="skill-top">
-                    <div class="skill-title-wrap">
+          <article class="interactive-skill-card skill-item" data-category="hardware" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
+            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
+              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div class="skill-title-wrap">
                       <div class="skill-spec-icon cat-hardware">
                         <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon">
                       </div>
@@ -928,20 +629,21 @@
                       </div>
                     </div>
                     <span class="skill-badge badge-avanzado">Avanzado</span>
-                  </div>
-                  <p class="skill-desc">Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y
+                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y
                     sistemas operativos.</p>
-                  <div class="skill-progress-wrap">
-                    <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
-                    <div class="skill-progress-bar">
+              <div class="skill-progress-wrap">
+                <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
+<div class="skill-progress-bar">
                       <div class="skill-progress-fill" style="width: 90%;"></div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
-        </div>
+        </div>>
       </div>
     </section>
 

@@ -108,52 +108,53 @@ function initProjectFilter() {
    ========================================================================== */
 function initSkillFilter() {
   const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
-  const categoryCards = document.querySelectorAll('.category-skill-card');
+  const skillCards = document.querySelectorAll('.interactive-skill-card');
 
-  // Alternar apertura/cierre de tarjeta de categoría
-  function toggleCategoryCard(card, forceState = null) {
-    const header = card.querySelector('.category-header');
-    const details = card.querySelector('.category-details');
-    const expandText = card.querySelector('.expand-text');
+  // Alternar apertura/cierre de tarjeta individual de habilidad
+  function toggleSkillCard(card, forceState = null) {
+    const header = card.querySelector('.skill-header-click');
+    const details = card.querySelector('.skill-details-expand');
     if (!details) return;
 
     const isOpen = card.classList.contains('is-open');
     const targetState = forceState !== null ? forceState : !isOpen;
 
+    // Si abrimos una, podemos cerrar las demás (opcional, para acordeón)
+    // skillCards.forEach(c => {
+    //   if (c !== card) {
+    //     c.classList.remove('is-open');
+    //     const cDet = c.querySelector('.skill-details-expand');
+    //     const cHead = c.querySelector('.skill-header-click');
+    //     if (cDet) cDet.hidden = true;
+    //     if (cHead) cHead.setAttribute('aria-expanded', 'false');
+    //   }
+    // });
+
     if (targetState) {
       card.classList.add('is-open');
       details.hidden = false;
       if (header) header.setAttribute('aria-expanded', 'true');
-      if (expandText) expandText.textContent = 'Ocultar';
     } else {
       card.classList.remove('is-open');
       details.hidden = true;
       if (header) header.setAttribute('aria-expanded', 'false');
-      if (expandText) expandText.textContent = 'Ver más';
     }
   }
 
   // Asignar eventos de clic y teclado a cada tarjeta
-  categoryCards.forEach(card => {
-    const header = card.querySelector('.category-header');
-    const pills = card.querySelector('.category-pills');
+  skillCards.forEach(card => {
+    const header = card.querySelector('.skill-header-click');
 
     if (header) {
       header.addEventListener('click', () => {
-        toggleCategoryCard(card);
+        toggleSkillCard(card);
       });
 
       header.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          toggleCategoryCard(card);
+          toggleSkillCard(card);
         }
-      });
-    }
-
-    if (pills) {
-      pills.addEventListener('click', () => {
-        toggleCategoryCard(card, true);
       });
     }
   });
@@ -166,13 +167,11 @@ function initSkillFilter() {
 
       const category = btn.getAttribute('data-category');
 
-      categoryCards.forEach(card => {
+      skillCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
-        if (category === 'all') {
+        if (category === 'all' || cardCat === category) {
           card.style.display = 'flex';
-        } else if (cardCat === category) {
-          card.style.display = 'flex';
-          toggleCategoryCard(card, true);
+          // toggleSkillCard(card, false); // Cierra todas al filtrar
         } else {
           card.style.display = 'none';
         }
