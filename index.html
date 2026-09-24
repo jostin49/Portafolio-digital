@@ -237,25 +237,22 @@
         </nav>
 
         <!-- Grid de Categorías de Habilidades (Modelo Interactivo Expandible) -->
-        <div class="interactive-skills-grid" id="skills-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <div class="interactive-skills-grid" id="skills-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: flex-start;">
 
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-frontend">
-                        <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">HTML5 Semántico</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon">
+              <span>HTML5 Semántico</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">HTML5 Semántico</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Estructuración limpia y accesible con landmarks semánticos, SEO técnico y
                     microformatos.</p>
               <div class="skill-progress-wrap">
@@ -266,23 +263,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-frontend">
-                        <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">CSS3 & Custom Properties</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon">
+              <span>CSS3 & Custom Properties</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">CSS3 & Custom Properties</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de
                     variables :root.</p>
               <div class="skill-progress-wrap">
@@ -293,23 +287,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-frontend">
-                        <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">JavaScript (ES6+)</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend / Logic</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon">
+              <span>JavaScript (ES6+)</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">JavaScript (ES6+)</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend / Logic</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos
                     reactivos.</p>
               <div class="skill-progress-wrap">
@@ -320,23 +311,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-frontend">
-                        <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">React</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend Framework</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon">
+              <span>React</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">React</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend Framework</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Componentes funcionales, hooks personalizados, estado global y ciclo de vida de
                     la UI.</p>
               <div class="skill-progress-wrap">
@@ -347,23 +335,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-frontend">
-                        <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Tailwind CSS</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Utility-First CSS</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon">
+              <span>Tailwind CSS</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Tailwind CSS</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Utility-First CSS</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Desarrollo ágil de interfaces adaptables, diseño mobile-first y componentes con
                     clases utilitarias.</p>
               <div class="skill-progress-wrap">
@@ -374,23 +359,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="backend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-backend">
-                        <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Python</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend & Data</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="backend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon">
+              <span>Python</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Python</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend & Data</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Programación orientada a objetos, scripts de automatización, Machine Learning y
                     backend.</p>
               <div class="skill-progress-wrap">
@@ -401,23 +383,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="backend" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-backend">
-                        <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Django & REST Framework</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend Framework</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="backend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon">
+              <span>Django & REST Framework</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Django & REST Framework</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend Framework</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional.</p>
               <div class="skill-progress-wrap">
                 <div class="skill-progress-meta"><span>Dominio</span><span>78%</span></div>
@@ -427,24 +406,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="database" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-database">
-                        <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">PostgreSQL</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Bases de Datos
-                          Relacionales</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="database" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon">
+              <span>PostgreSQL</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">PostgreSQL</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Database</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Modelado de bases de datos relacionales, normalización, índices y consultas
                     complejas.</p>
               <div class="skill-progress-wrap">
@@ -455,24 +430,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="database" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-database">
-                        <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">SQL Server</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Bases de Datos
-                          Relacionales</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="database" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon">
+              <span>SQL Server</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">SQL Server</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Database</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Administración y desarrollo con Transact-SQL (T-SQL), stored procedures, vistas,
                     triggers y consistencia transaccional.</p>
               <div class="skill-progress-wrap">
@@ -483,23 +454,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="cloud" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-cloud">
-                        <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">AWS Cloud Foundations</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cloud Computing</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="cloud" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon">
+              <span>AWS Cloud Foundations</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">AWS Cloud Foundations</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cloud Computing</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Certificación AWS Academy: instancias EC2, buckets S3, bases de datos RDS, IAM,
                     VPC y arquitecturas de alta disponibilidad.</p>
               <div class="skill-progress-wrap">
@@ -510,23 +478,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="cloud" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-cloud">
-                        <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Docker</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Contenedores & DevOps</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="cloud" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon">
+              <span>Docker</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Docker</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Contenedores & DevOps</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Creación de Dockerfiles, orquestación con Docker Compose, empaquetado de
                     aplicaciones y despliegues reproducibles.</p>
               <div class="skill-progress-wrap">
@@ -537,23 +502,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-tools">
-                        <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Git</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Control de Versiones</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon">
+              <span>Git</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Git</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Control de Versiones</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Ramas de trabajo, pull requests, resolución de conflictos y flujo GitFlow.</p>
               <div class="skill-progress-wrap">
                 <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
@@ -563,23 +525,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-tools">
-                        <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">GitHub</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Colaboración & Deploy</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon">
+              <span>GitHub</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">GitHub</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Colaboración & Deploy</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Repositorios remotos, pull requests, code reviews y publicación en GitHub Pages.</p>
               <div class="skill-progress-wrap">
                 <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
@@ -589,23 +548,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-tools">
-                        <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">GitLab</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">DevOps & Repositorios</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-intermedio">Intermedio</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon">
+              <span>GitLab</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">GitLab</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">DevOps & Repositorios</span>
+                </div>
+                <span class="skill-badge badge-intermedio">Intermedio</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Gestión del ciclo de vida del software, pipelines CI/CD, merge requests y
                     control de incidencias.</p>
               <div class="skill-progress-wrap">
@@ -616,23 +572,20 @@
               </div>
             </div>
           </article>
-          <article class="interactive-skill-card skill-item" data-category="hardware" style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; flex: 1 1 280px; max-width: 400px; min-width: 250px; transition: all var(--transition-fast);">
-            <div class="skill-header-click" tabindex="0" role="button" aria-expanded="false" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; cursor: pointer;">
-              <div class="skill-top" style="margin-bottom:0; width: 100%; display: flex; align-items: center; justify-content: space-between;">
-                <div class="skill-title-wrap">
-                      <div class="skill-spec-icon cat-hardware">
-                        <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon">
-                      </div>
-                      <div>
-                        <h5 style="font-size: 1rem; font-weight: 700;">Soporte Técnico de PC</h5>
-                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Infraestructura</span>
-                      </div>
-                    </div>
-                    <span class="skill-badge badge-avanzado">Avanzado</span>
-                <svg class="skill-chevron icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          <article class="interactive-skill-card skill-item" data-category="hardware" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
+            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
+              <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon">
+              <span>Soporte Técnico de PC</span>
             </div>
-            <div class="skill-details-expand" hidden style="padding: 0 1rem 1rem 1rem; border-top: 1px dashed var(--color-border); margin-top: 0.5rem; padding-top: 1rem; animation: fadeInDown 0.3s ease;">
+            
+            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
+              <div class="skill-top" style="margin-bottom: 0.75rem;">
+                <div>
+                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Soporte Técnico de PC</h5>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Infraestructura</span>
+                </div>
+                <span class="skill-badge badge-avanzado">Avanzado</span>
+              </div>
               <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y
                     sistemas operativos.</p>
               <div class="skill-progress-wrap">
