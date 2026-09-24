@@ -237,366 +237,284 @@
         </nav>
 
         <!-- Grid de Categorías de Habilidades (Modelo Interactivo Expandible) -->
-        <div class="interactive-skills-grid" id="skills-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: flex-start;">
+        <div class="interactive-skills-grid" id="skills-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
 
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon">
-              <span>HTML5 Semántico</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">HTML5 Semántico</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="frontend"
+                  data-name="HTML5 Semántico"
+                  data-subcat="Frontend"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Estructuración limpia y accesible con landmarks semánticos, SEO técnico y
+                    microformatos."
+                  data-prog="90%"
+                  data-logo="assets/icons/html5.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/html5.svg" alt="HTML5" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>HTML5</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="frontend"
+                  data-name="CSS3 &amp; Custom Properties"
+                  data-subcat="Frontend"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de
+                    variables :root."
+                  data-prog="85%"
+                  data-logo="assets/icons/css3.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>CSS3</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="frontend"
+                  data-name="JavaScript (ES6+)"
+                  data-subcat="Frontend / Logic"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos
+                    reactivos."
+                  data-prog="80%"
+                  data-logo="assets/icons/javascript.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>JavaScript</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="frontend"
+                  data-name="React"
+                  data-subcat="Frontend Framework"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Componentes funcionales, hooks personalizados, estado global y ciclo de vida de
+                    la UI."
+                  data-prog="75%"
+                  data-logo="assets/icons/react.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>React</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="frontend"
+                  data-name="Tailwind CSS"
+                  data-subcat="Utility-First CSS"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Desarrollo ágil de interfaces adaptables, diseño mobile-first y componentes con
+                    clases utilitarias."
+                  data-prog="80%"
+                  data-logo="assets/icons/tailwindcss.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Tailwind CSS</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="backend"
+                  data-name="Python"
+                  data-subcat="Backend &amp; Data"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Programación orientada a objetos, scripts de automatización, Machine Learning y
+                    backend."
+                  data-prog="85%"
+                  data-logo="assets/icons/python.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Python</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="backend"
+                  data-name="Django &amp; REST Framework"
+                  data-subcat="Backend Framework"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional."
+                  data-prog="78%"
+                  data-logo="assets/icons/django.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Django</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="database"
+                  data-name="PostgreSQL"
+                  data-subcat="Database"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Modelado de bases de datos relacionales, normalización, índices y consultas
+                    complejas."
+                  data-prog="80%"
+                  data-logo="assets/icons/postgresql.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>PostgreSQL</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="database"
+                  data-name="SQL Server"
+                  data-subcat="Database"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Administración y desarrollo con Transact-SQL (T-SQL), stored procedures, vistas,
+                    triggers y consistencia transaccional."
+                  data-prog="80%"
+                  data-logo="assets/icons/sqlserver.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>SQL Server</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="cloud"
+                  data-name="AWS Cloud Foundations"
+                  data-subcat="Cloud Computing"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Certificación AWS Academy: instancias EC2, buckets S3, bases de datos RDS, IAM,
+                    VPC y arquitecturas de alta disponibilidad."
+                  data-prog="75%"
+                  data-logo="assets/icons/aws.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>AWS</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="cloud"
+                  data-name="Docker"
+                  data-subcat="Contenedores &amp; DevOps"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Creación de Dockerfiles, orquestación con Docker Compose, empaquetado de
+                    aplicaciones y despliegues reproducibles."
+                  data-prog="75%"
+                  data-logo="assets/icons/docker.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Docker</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="tools"
+                  data-name="Git"
+                  data-subcat="Control de Versiones"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Ramas de trabajo, pull requests, resolución de conflictos y flujo GitFlow."
+                  data-prog="88%"
+                  data-logo="assets/icons/git.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Git</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="tools"
+                  data-name="GitHub"
+                  data-subcat="Colaboración &amp; Deploy"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Repositorios remotos, pull requests, code reviews y publicación en GitHub Pages."
+                  data-prog="88%"
+                  data-logo="assets/icons/github.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>GitHub</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="tools"
+                  data-name="GitLab"
+                  data-subcat="DevOps &amp; Repositorios"
+                  data-badge="Intermedio"
+                  data-badge-class="badge-intermedio"
+                  data-desc="Gestión del ciclo de vida del software, pipelines CI/CD, merge requests y
+                    control de incidencias."
+                  data-prog="80%"
+                  data-logo="assets/icons/gitlab.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>GitLab</span>
+          </button>
+          <button type="button" class="skill-pill-btn skill-item" 
+                  data-category="hardware"
+                  data-name="Soporte Técnico de PC"
+                  data-subcat="Infraestructura"
+                  data-badge="Avanzado"
+                  data-badge-class="badge-avanzado"
+                  data-desc="Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y
+                    sistemas operativos."
+                  data-prog="90%"
+                  data-logo="assets/icons/soporte.svg"
+                  style="display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.15rem; background-color: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: 12px; font-weight: 600; color: var(--color-text); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); cursor: pointer;"
+                  onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--color-primary)'; this.style.boxShadow='var(--shadow-card-hover)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='var(--shadow-sm)';">
+             <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon" style="width:20px; height:20px; object-fit:contain;">
+             <span>Soporte Técnico</span>
+          </button>
+        </div>
+        
+        <!-- Skill Modal (Added by refactor) -->
+        <div id="skill-detail-modal" class="modal-backdrop" hidden style="position: fixed; inset: 0; background-color: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
+          <div class="modal-content" style="background-color: var(--color-surface-card); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 400px; width: 100%; box-shadow: var(--shadow-modal); overflow: hidden; transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--color-border);">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="skill-spec-icon" style="background-color: var(--color-surface-hover); border-radius: var(--radius-sm); padding: 0.5rem; border: 1px solid var(--color-border);">
+                  <img id="modal-skill-logo" src="" alt="" style="width: 24px; height: 24px; object-fit: contain;">
                 </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Estructuración limpia y accesible con landmarks semánticos, SEO técnico y
-                    microformatos.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 90%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/css3.svg" alt="CSS3" class="skill-brand-icon">
-              <span>CSS3 & Custom Properties</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
                 <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">CSS3 & Custom Properties</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend</span>
+                  <h3 id="modal-skill-name" style="font-size: 1.25rem; font-weight: 800; color: var(--color-text); margin-bottom: 0.1rem;"></h3>
+                  <span id="modal-skill-subcat" style="font-size: 0.8125rem; color: var(--color-text-muted);"></span>
                 </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
               </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura visual moderna, Flexbox, CSS Grid, media queries y sistemas de
-                    variables :root.</p>
+              <button id="close-skill-modal" style="padding: 0.25rem; color: var(--color-text-muted); cursor: pointer;" aria-label="Cerrar modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            <div style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 0.875rem; font-weight: 600;">Nivel de Dominio</span>
+                <span id="modal-skill-badge" class="skill-badge"></span>
+              </div>
+              <p id="modal-skill-desc" style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+              
               <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 85%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-brand-icon">
-              <span>JavaScript (ES6+)</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">JavaScript (ES6+)</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend / Logic</span>
+                <div class="skill-progress-meta" style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 600; color: var(--color-text-muted); margin-bottom: 0.5rem;">
+                  <span>Dominio</span>
+                  <span id="modal-skill-prog-text"></span>
                 </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Manipulación del DOM, promesas, async/await, consumo de APIs Fetch y eventos
-                    reactivos.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/react.svg" alt="React" class="skill-brand-icon">
-              <span>React</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">React</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontend Framework</span>
+                <div class="skill-progress-bar" style="width: 100%; height: 8px; background-color: var(--color-surface-hover); border-radius: var(--radius-full); overflow: hidden;">
+                  <div id="modal-skill-prog-fill" style="height: 100%; background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); border-radius: var(--radius-full); width: 0%; transition: width 1s ease-out;"></div>
                 </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Componentes funcionales, hooks personalizados, estado global y ciclo de vida de
-                    la UI.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 75%;"></div>
-                    </div>
               </div>
             </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="frontend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/tailwindcss.svg" alt="Tailwind CSS" class="skill-brand-icon">
-              <span>Tailwind CSS</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Tailwind CSS</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Utility-First CSS</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Desarrollo ágil de interfaces adaptables, diseño mobile-first y componentes con
-                    clases utilitarias.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="backend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/python.svg" alt="Python" class="skill-brand-icon">
-              <span>Python</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Python</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend & Data</span>
-                </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Programación orientada a objetos, scripts de automatización, Machine Learning y
-                    backend.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>85%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 85%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="backend" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/django.svg" alt="Django" class="skill-brand-icon">
-              <span>Django & REST Framework</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Django & REST Framework</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Backend Framework</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Arquitectura MVT, endpoints REST seguros, autenticación JWT y ORM relacional.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>78%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 78%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="database" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="skill-brand-icon">
-              <span>PostgreSQL</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">PostgreSQL</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Database</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Modelado de bases de datos relacionales, normalización, índices y consultas
-                    complejas.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="database" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/sqlserver.svg" alt="SQL Server" class="skill-brand-icon">
-              <span>SQL Server</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">SQL Server</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Database</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Administración y desarrollo con Transact-SQL (T-SQL), stored procedures, vistas,
-                    triggers y consistencia transaccional.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="cloud" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/aws.svg" alt="AWS" class="skill-brand-icon">
-              <span>AWS Cloud Foundations</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">AWS Cloud Foundations</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cloud Computing</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Certificación AWS Academy: instancias EC2, buckets S3, bases de datos RDS, IAM,
-                    VPC y arquitecturas de alta disponibilidad.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 75%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="cloud" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/docker.svg" alt="Docker" class="skill-brand-icon">
-              <span>Docker</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Docker</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Contenedores & DevOps</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Creación de Dockerfiles, orquestación con Docker Compose, empaquetado de
-                    aplicaciones y despliegues reproducibles.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>75%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 75%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/git.svg" alt="Git" class="skill-brand-icon">
-              <span>Git</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Git</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Control de Versiones</span>
-                </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Ramas de trabajo, pull requests, resolución de conflictos y flujo GitFlow.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 88%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/github.svg" alt="GitHub" class="skill-brand-icon">
-              <span>GitHub</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">GitHub</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Colaboración & Deploy</span>
-                </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Repositorios remotos, pull requests, code reviews y publicación en GitHub Pages.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>88%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 88%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="tools" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/gitlab.svg" alt="GitLab" class="skill-brand-icon">
-              <span>GitLab</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">GitLab</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">DevOps & Repositorios</span>
-                </div>
-                <span class="skill-badge badge-intermedio">Intermedio</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Gestión del ciclo de vida del software, pipelines CI/CD, merge requests y
-                    control de incidencias.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>80%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-          <article class="interactive-skill-card skill-item" data-category="hardware" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: all var(--transition-fast);">
-            <div class="skill-header-click skill-pill" tabindex="0" role="button" aria-expanded="false" style="cursor: pointer;">
-              <img src="assets/icons/soporte.svg" alt="Soporte Técnico" class="skill-brand-icon">
-              <span>Soporte Técnico de PC</span>
-            </div>
-            
-            <div class="skill-details-expand skill-spec-card" hidden style="width: 100%; min-width: 250px; max-width: 320px; text-align: left; animation: fadeInDown 0.3s ease; position: relative;">
-              <div class="skill-top" style="margin-bottom: 0.75rem;">
-                <div>
-                  <h5 style="font-size: 1rem; font-weight: 700; margin: 0; color: var(--color-text);">Soporte Técnico de PC</h5>
-                  <span style="font-size: 0.75rem; color: var(--color-text-muted);">Infraestructura</span>
-                </div>
-                <span class="skill-badge badge-avanzado">Avanzado</span>
-              </div>
-              <p class="skill-desc" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Mantenimiento preventivo, diagnóstico de hardware, configuración de redes y
-                    sistemas operativos.</p>
-              <div class="skill-progress-wrap">
-                <div class="skill-progress-meta"><span>Dominio</span><span>90%</span></div>
-<div class="skill-progress-bar">
-                      <div class="skill-progress-fill" style="width: 90%;"></div>
-                    </div>
-              </div>
-            </div>
-          </article>
-        </div>>
+          </div>
+        </div>
+        >
       </div>
     </section>
 

@@ -108,54 +108,82 @@ function initProjectFilter() {
    ========================================================================== */
 function initSkillFilter() {
   const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
-  const skillCards = document.querySelectorAll('.interactive-skill-card');
+  const skillPills = document.querySelectorAll('.skill-pill-btn');
+  const modal = document.getElementById('skill-detail-modal');
+  
+  if (!modal) return;
 
-  // Alternar apertura/cierre de tarjeta individual de habilidad
-  function toggleSkillCard(card, forceState = null) {
-    const header = card.querySelector('.skill-header-click');
-    const details = card.querySelector('.skill-details-expand');
-    if (!details) return;
+  const closeBtn = document.getElementById('close-skill-modal');
+  
+  // Elements inside modal to populate
+  const modLogo = document.getElementById('modal-skill-logo');
+  const modName = document.getElementById('modal-skill-name');
+  const modSubcat = document.getElementById('modal-skill-subcat');
+  const modBadge = document.getElementById('modal-skill-badge');
+  const modDesc = document.getElementById('modal-skill-desc');
+  const modProgText = document.getElementById('modal-skill-prog-text');
+  const modProgFill = document.getElementById('modal-skill-prog-fill');
 
-    const isOpen = card.classList.contains('is-open');
-    const targetState = forceState !== null ? forceState : !isOpen;
+  const openSkillModal = (btn) => {
+    // Populate modal data
+    modLogo.src = btn.getAttribute('data-logo');
+    modName.textContent = btn.getAttribute('data-name');
+    modSubcat.textContent = btn.getAttribute('data-subcat');
+    modDesc.textContent = btn.getAttribute('data-desc');
+    
+    modBadge.textContent = btn.getAttribute('data-badge');
+    modBadge.className = 'skill-badge ' + btn.getAttribute('data-badge-class');
+    
+    const progVal = btn.getAttribute('data-prog');
+    modProgText.textContent = progVal;
+    
+    // Reset progress bar animation
+    modProgFill.style.width = '0%';
+    
+    // Show modal
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Trigger animation
+    requestAnimationFrame(() => {
+      modal.style.opacity = '1';
+      modal.style.pointerEvents = 'auto';
+      modal.querySelector('.modal-content').style.transform = 'translateY(0)';
+      
+      setTimeout(() => {
+        modProgFill.style.width = progVal;
+      }, 300);
+    });
+  };
 
-    // Si abrimos una, podemos cerrar las demás (opcional, para acordeón)
-    // skillCards.forEach(c => {
-    //   if (c !== card) {
-    //     c.classList.remove('is-open');
-    //     const cDet = c.querySelector('.skill-details-expand');
-    //     const cHead = c.querySelector('.skill-header-click');
-    //     if (cDet) cDet.hidden = true;
-    //     if (cHead) cHead.setAttribute('aria-expanded', 'false');
-    //   }
-    // });
+  const closeSkillModal = () => {
+    modal.style.opacity = '0';
+    modal.style.pointerEvents = 'none';
+    modal.querySelector('.modal-content').style.transform = 'translateY(20px)';
+    document.body.style.overflow = 'auto';
+    setTimeout(() => {
+      modal.setAttribute('hidden', '');
+    }, 300);
+  };
 
-    if (targetState) {
-      card.classList.add('is-open');
-      details.hidden = false;
-      if (header) header.setAttribute('aria-expanded', 'true');
-    } else {
-      card.classList.remove('is-open');
-      details.hidden = true;
-      if (header) header.setAttribute('aria-expanded', 'false');
+  // Asignar eventos a píldoras
+  skillPills.forEach(btn => {
+    btn.addEventListener('click', () => {
+      openSkillModal(btn);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeSkillModal);
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeSkillModal();
     }
-  }
+  });
 
-  // Asignar eventos de clic y teclado a cada tarjeta
-  skillCards.forEach(card => {
-    const header = card.querySelector('.skill-header-click');
-
-    if (header) {
-      header.addEventListener('click', () => {
-        toggleSkillCard(card);
-      });
-
-      header.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleSkillCard(card);
-        }
-      });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+      closeSkillModal();
     }
   });
 
@@ -167,11 +195,10 @@ function initSkillFilter() {
 
       const category = btn.getAttribute('data-category');
 
-      skillCards.forEach(card => {
+      skillPills.forEach(card => {
         const cardCat = card.getAttribute('data-category');
         if (category === 'all' || cardCat === category) {
-          card.style.display = 'flex';
-          // toggleSkillCard(card, false); // Cierra todas al filtrar
+          card.style.display = 'inline-flex';
         } else {
           card.style.display = 'none';
         }
