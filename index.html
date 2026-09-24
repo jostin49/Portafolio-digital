@@ -1132,6 +1132,36 @@
                 <span>Copiar</span>
               </div>
             </div>
+
+            <!-- Text -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #0f172a; color: #ffffff;"
+                  data-hex="#0f172a">Claro</div>
+                <div class="ds-swatch" style="background-color: #f8fafc; color: #0f172a; text-shadow: none;" data-hex="#f8fafc">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Text</h4>
+              <code class="ds-color-var">--color-text</code>
+              <div class="ds-color-values">
+                <span>#0f172a / #f8fafc</span>
+                <span>Copiar</span>
+              </div>
+            </div>
+
+            <!-- Text Muted -->
+            <div class="ds-color-card">
+              <div class="ds-color-swatches">
+                <div class="ds-swatch" style="background-color: #64748b; color: #ffffff;"
+                  data-hex="#64748b">Claro</div>
+                <div class="ds-swatch" style="background-color: #94a3b8; color: #0f172a; text-shadow: none;" data-hex="#94a3b8">Oscuro</div>
+              </div>
+              <h4 class="ds-color-title">Text Muted</h4>
+              <code class="ds-color-var">--color-text-muted</code>
+              <div class="ds-color-values">
+                <span>#64748b / #94a3b8</span>
+                <span>Copiar</span>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -1183,6 +1213,18 @@
               <p style="color: var(--color-text-muted);">
                 Estudiante de 8vo semestre de Ingeniería en Software en UNEMI, especializado en soluciones web con
                 React, Python y Cloud Computing.
+              </p>
+            </div>
+          </div>
+
+          <div class="ds-typo-item">
+            <div class="ds-typo-meta">
+              <strong>Texto Secundario &lt;small&gt;</strong><br>
+              0.875rem (14px) / 400
+            </div>
+            <div>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+                Este es un ejemplo de texto secundario, utilizado para metadatos, etiquetas y descripciones menores que no deben competir visualmente con el texto principal.
               </p>
             </div>
           </div>
@@ -1311,6 +1353,44 @@
               <label for="sample-textarea" class="form-label">Mensaje Informativo</label>
               <textarea id="sample-textarea" rows="2" class="form-control"
                 placeholder="Escribe tu mensaje...">Componente con focus ring y tamaño fluido.</textarea>
+            </div>
+
+            <!-- Navbar & Project Card Mockups -->
+            <div class="ds-component-box" style="grid-column: 1 / -1;">
+              <h4 style="font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-sm);">Componentes de Layout (Navbar & Card)</h4>
+              <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+                
+                <!-- Navbar Mockup -->
+                <div style="background-color: var(--color-surface); padding: var(--space-sm) var(--space-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--color-border);">
+                  <div class="brand-logo" style="font-size: 1.1rem; pointer-events: none;">
+                    <span class="brand-badge">JC</span>
+                    <span>Jostin<span class="brand-accent">.dev</span></span>
+                  </div>
+                  <div style="display: flex; gap: var(--space-md); font-size: 0.875rem; font-weight: 600;">
+                    <span style="color: var(--color-text);">Inicio</span>
+                    <span style="color: var(--color-text-muted);">Proyectos</span>
+                  </div>
+                </div>
+
+                <!-- Project Card Mockup -->
+                <article class="project-card" style="max-width: 320px; pointer-events: none;">
+                  <div>
+                    <figure class="project-figure" style="height: 160px; background-color: var(--color-surface-hover); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--color-border);">
+                      <span style="color: var(--color-text-muted); font-size: 0.875rem;">Imagen (160x320)</span>
+                      <figcaption class="project-category-tag">Categoría</figcaption>
+                    </figure>
+                    <div class="project-body">
+                      <h3 class="project-title" style="font-size: 1.125rem;">Título del Proyecto</h3>
+                      <p class="project-desc" style="font-size: 0.875rem;">Descripción breve que detalla la función principal del proyecto mostrado en la tarjeta.</p>
+                      <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Python</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
             </div>
           </div>
         </article>
