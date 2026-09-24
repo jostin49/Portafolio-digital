@@ -111,6 +111,8 @@ function initSkillFilter() {
   const skillPills = document.querySelectorAll('.skill-pill-btn');
   const modal = document.getElementById('skill-detail-modal');
   
+  console.log("initSkillFilter running! modal found:", !!modal, "pills found:", skillPills.length);
+  
   if (!modal) return;
 
   const closeBtn = document.getElementById('close-skill-modal');
@@ -141,25 +143,18 @@ function initSkillFilter() {
     modProgFill.style.width = '0%';
     
     // Show modal
+    modal.classList.add('is-active');
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
     
-    // Trigger animation
-    requestAnimationFrame(() => {
-      modal.style.opacity = '1';
-      modal.style.pointerEvents = 'auto';
-      modal.querySelector('.modal-content').style.transform = 'translateY(0)';
-      
-      setTimeout(() => {
-        modProgFill.style.width = progVal;
-      }, 300);
-    });
+    // Trigger progress bar animation
+    setTimeout(() => {
+      modProgFill.style.width = progVal;
+    }, 300);
   };
 
   const closeSkillModal = () => {
-    modal.style.opacity = '0';
-    modal.style.pointerEvents = 'none';
-    modal.querySelector('.modal-content').style.transform = 'translateY(20px)';
+    modal.classList.remove('is-active');
     document.body.style.overflow = 'auto';
     setTimeout(() => {
       modal.setAttribute('hidden', '');

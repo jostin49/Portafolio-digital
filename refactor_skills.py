@@ -97,8 +97,8 @@ def refactor_html():
         </div>
         
         <!-- Skill Modal (Added by refactor) -->
-        <div id="skill-detail-modal" class="modal-backdrop" hidden style="position: fixed; inset: 0; background-color: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
-          <div class="modal-content" style="background-color: var(--color-surface-card); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 400px; width: 100%; box-shadow: var(--shadow-modal); overflow: hidden; transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div id="skill-detail-modal" class="modal-backdrop" hidden>
+          <div class="modal-content" style="background-color: var(--color-surface-card); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 400px; width: 100%; box-shadow: var(--shadow-modal); overflow: hidden; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
             <div style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--color-border);">
               <div style="display: flex; align-items: center; gap: 0.75rem;">
                 <div class="skill-spec-icon" style="background-color: var(--color-surface-hover); border-radius: var(--radius-sm); padding: 0.5rem; border: 1px solid var(--color-border);">
@@ -109,7 +109,7 @@ def refactor_html():
                   <span id="modal-skill-subcat" style="font-size: 0.8125rem; color: var(--color-text-muted);"></span>
                 </div>
               </div>
-              <button id="close-skill-modal" style="padding: 0.25rem; color: var(--color-text-muted); cursor: pointer;" aria-label="Cerrar modal">
+              <button id="close-skill-modal" style="padding: 0.25rem; color: var(--color-text-muted); cursor: pointer; background: none; border: none;" aria-label="Cerrar modal">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
             </div>
