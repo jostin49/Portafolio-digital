@@ -22,8 +22,7 @@ function initTheme() {
   const toggleBtn = document.getElementById('theme-toggle');
   if (!toggleBtn) return;
 
-  const currentTheme = localStorage.getItem('theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const currentTheme = localStorage.getItem('theme') || 'dark';
 
   applyTheme(currentTheme);
 
