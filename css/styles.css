@@ -2776,7 +2776,7 @@ img, video, iframe, embed, object {
     text-align: center;
   }
   .about-bio-text p {
-    text-align: center;
+    text-align: justify;
     hyphens: none;
   }
   .about-tech-checklist {
@@ -2943,7 +2943,7 @@ img, video, iframe, embed, object {
     max-width: 100%;
   }
   .about-bio-text p {
-    text-align: center;
+    text-align: justify;
     hyphens: none;
   }
   .about-tech-checklist        { grid-template-columns: 1fr; }
