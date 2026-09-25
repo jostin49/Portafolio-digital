@@ -911,31 +911,7 @@ ul, ol {
   }
 }
 
-/* Responsivo para sección Sobre Mí */
-@media (max-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-media-column {
-    order: -1;
-  }
-
-  .about-photo-wrapper {
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-tech-checklist {
-    grid-template-columns: 1fr;
-  }
-
-  .about-main-heading {
-    font-size: 1.875rem;
-  }
-}
+/* Responsivo para sección Sobre Mí gestionado en la sección 13 (Responsive Design) */
 
 /* ==========================================================================
    5. SECCIÓN HABILIDADES (SKILLS)
@@ -2703,6 +2679,7 @@ img, video, iframe, embed, object {
   .about-photo-wrapper {
     max-width: 240px;
     width: 100%;
+    margin: 0 auto;
   }
   .about-photo-wrapper::before {
     width: min(190px, 50vw);
@@ -2711,6 +2688,12 @@ img, video, iframe, embed, object {
   .about-ambient-glow {
     width: min(210px, 55vw);
     height: min(240px, 62vw);
+  }
+  .about-main-heading {
+    text-align: center;
+  }
+  .about-meta-row {
+    justify-content: center;
   }
 
   /* ---- Contact ---- */
@@ -2786,8 +2769,18 @@ img, video, iframe, embed, object {
   .hero-photo { max-height: min(260px, 62vw); }
 
   /* About */
+  .about-main-heading {
+    text-align: center;
+  }
+  .about-bio-text p {
+    text-align: left;
+    hyphens: none;
+  }
   .about-tech-checklist {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .about-meta-row {
+    justify-content: center;
   }
 
   /* Skills */
@@ -2931,13 +2924,27 @@ img, video, iframe, embed, object {
   .about-photo-wrapper {
     max-width: 170px;
     width: 100%;
+    margin: 0 auto;
   }
   .about-photo-wrapper::before { display: none; }
   .about-ambient-glow          { display: none; }
   .about-photo-img             { max-height: 210px; }
-  .about-main-heading          { font-size: clamp(1.3rem, 5.5vw, 1.75rem); }
+  .about-main-heading {
+    font-size: clamp(1.3rem, 5.5vw, 1.75rem);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .about-bio-text p {
+    text-align: left;
+    hyphens: none;
+  }
   .about-tech-checklist        { grid-template-columns: 1fr; }
-  .about-meta-row              { gap: 0.5rem; }
+  .about-meta-row {
+    gap: 0.5rem;
+    justify-content: center;
+  }
   .about-meta-chip             { font-size: 0.75rem; padding: 0.4rem 0.7rem; }
 
   /* Skills */
