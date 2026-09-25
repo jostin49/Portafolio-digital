@@ -2769,11 +2769,14 @@ img, video, iframe, embed, object {
   .hero-photo { max-height: min(260px, 62vw); }
 
   /* About */
+  .about-content-column {
+    text-align: center;
+  }
   .about-main-heading {
     text-align: center;
   }
   .about-bio-text p {
-    text-align: left;
+    text-align: center;
     hyphens: none;
   }
   .about-tech-checklist {
@@ -2929,6 +2932,9 @@ img, video, iframe, embed, object {
   .about-photo-wrapper::before { display: none; }
   .about-ambient-glow          { display: none; }
   .about-photo-img             { max-height: 210px; }
+  .about-content-column {
+    text-align: center;
+  }
   .about-main-heading {
     font-size: clamp(1.3rem, 5.5vw, 1.75rem);
     text-align: center;
@@ -2937,7 +2943,7 @@ img, video, iframe, embed, object {
     max-width: 100%;
   }
   .about-bio-text p {
-    text-align: left;
+    text-align: center;
     hyphens: none;
   }
   .about-tech-checklist        { grid-template-columns: 1fr; }
