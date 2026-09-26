@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" data-theme="dark">
 
 <head>
@@ -445,97 +445,96 @@
         </div>
       </div>
     </section> <!-- SECCIÓN: PROYECTOS DESTACADOS -->
-    <section id="proyectos" class="section" aria-labelledby="projects-title">
+<    <section id="proyectos" class="section" aria-labelledby="projects-title">
       <div class="container">
         <header class="section-header">
-          <span class="section-tag">Portafolio Práctico</span>
+          <span class="section-tag">Portafolio Practico</span>
           <h2 id="projects-title" class="section-title">Proyectos Destacados</h2>
           <p class="section-description">
-            Soluciones aplicadas que resuelven necesidades reales con código estructurado, repositorios abiertos y demos
-            funcionales.
+            Soluciones aplicadas que resuelven necesidades reales con codigo estructurado y repositorios abiertos.
           </p>
         </header>
-
-        <!-- Showcase Hub con botón "Ver Proyectos" -->
-        <div class="projects-showcase-hub">
-          <div class="showcase-teaser-grid">
-            <!-- Teaser 1: EcoScam -->
-            <div class="showcase-teaser-card" data-project-id="ecosam" title="Clic para explorar EcoScam">
-              <div class="teaser-logo-wrap">
-                <img src="assets/EcoScam.png" alt="EcoScam" class="teaser-logo">
+        <div class="projects-grid" role="list">
+          <article class="project-card" role="listitem">
+            <figure class="project-figure">
+              <img src="assets/ecoscan_preview.jpg" alt="EcoScan" class="project-img" loading="lazy">
+              <figcaption class="project-category-badge">IA - Eco-Tech</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">EcoScan &mdash; Clasificacion de Residuos</h3>
+              <p class="project-description">Sistema de inteligencia artificial que clasifica imagenes de residuos en 9 categorias usando un ensemble de 4 CNNs. El usuario sube una foto y recibe la categoria del residuo junto al porcentaje de confianza.</p>
+              <div class="project-problem">
+                <span class="project-problem-label">&#127919; Problema que resuelve</span>
+                <p>Mas del 90% de los residuos reciclables terminan en rellenos sanitarios por clasificacion incorrecta. EcoScan permite identificar correctamente que tipo de residuo se tiene y como reciclarlo.</p>
               </div>
-              <div class="teaser-info">
-                <h4>EcoScam</h4>
-                <span>Eco-Tech / AI</span>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Docker</span><span class="tech-tag">CNN Ensemble</span>
               </div>
-              <span class="teaser-arrow">→</span>
             </div>
-
-            <!-- Teaser 2: CUENTIA -->
-            <div class="showcase-teaser-card" data-project-id="cuentia" title="Clic para explorar CUENTIA">
-              <div class="teaser-logo-wrap">
-                <img src="assets/CuentIA.png" alt="CUENTIA" class="teaser-logo">
+            <footer class="project-footer">
+              <a href="https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
+            </footer>
+          </article>
+          <article class="project-card" role="listitem">
+            <figure class="project-figure">
+              <img src="assets/cuentia_preview.jpg" alt="CuentIA" class="project-img" loading="lazy">
+              <figcaption class="project-category-badge">IA - Educacion</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">CuentIA &mdash; Cuentos Infantiles con IA</h3>
+              <p class="project-description">Plataforma digital basada en IA que genera cuentos infantiles personalizados segun nombre, edad, intereses y valores del nino. Integra NLP para el texto narrativo y TTS para la narracion en audio.</p>
+              <div class="project-problem">
+                <span class="project-problem-label">&#127919; Problema que resuelve</span>
+                <p>La escasez de contenido educativo personalizado para ninos. CuentIA permite a padres y educadores crear historias unicas adaptadas al perfil lector con biblioteca personal y seguimiento del progreso.</p>
               </div>
-              <div class="teaser-info">
-                <h4>CUENTIA</h4>
-                <span>Web Application</span>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span><span class="tech-tag">Django</span><span class="tech-tag">React</span><span class="tech-tag">NLP</span><span class="tech-tag">TTS</span>
               </div>
-              <span class="teaser-arrow">→</span>
             </div>
-
-            <!-- Teaser 3: AgroMercado -->
-            <div class="showcase-teaser-card" data-project-id="agromercado" title="Clic para explorar AgroMercado">
-              <div class="teaser-logo-wrap">
-                <img src="assets/AgroMercado.png" alt="AgroMercado" class="teaser-logo">
+            <footer class="project-footer">
+              <a href="https://github.com/Jostinchalan/CUENTIA" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
+            </footer>
+          </article>
+          <article class="project-card" role="listitem">
+            <figure class="project-figure">
+              <img src="assets/agromercado_preview.jpg" alt="AgroMercado" class="project-img" loading="lazy">
+              <figcaption class="project-category-badge">E-commerce - Web</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">AgroMercado &mdash; E-commerce Agricola</h3>
+              <p class="project-description">Plataforma web de comercio electronico para la venta de productos de cuatro sistemas de produccion: acuicola, pesquero, ganadero y vegetal. Incluye chatbot de asistencia al usuario y secciones dinamicas por categoria.</p>
+              <div class="project-problem">
+                <span class="project-problem-label">&#127919; Problema que resuelve</span>
+                <p>La falta de canales digitales accesibles para productores agricolas. AgroMercado permite mostrar y simular compras del sector primario con interfaz clara y accesible.</p>
               </div>
-              <div class="teaser-info">
-                <h4>AgroMercado</h4>
-                <span>E-commerce</span>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">HTML/CSS</span>
               </div>
-              <span class="teaser-arrow">→</span>
             </div>
-
-            <!-- Teaser 4: GUIOSPRO-FLOSS -->
-            <div class="showcase-teaser-card" data-project-id="guiospro" title="Clic para explorar GUIOSPRO">
-              <div class="teaser-logo-wrap">
-                <img src="assets/GuiosPro.png" alt="GUIOSPRO-FLOSS" class="teaser-logo">
+            <footer class="project-footer">
+              <a href="https://github.com/Jostinchalan/AgroMercado" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
+            </footer>
+          </article>
+          <article class="project-card" role="listitem">
+            <figure class="project-figure">
+              <img src="assets/guiospro_preview.jpg" alt="GUIOSPRO-FLOSS" class="project-img" loading="lazy">
+              <figcaption class="project-category-badge">Open Source - Evaluacion</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">GUIOSPRO-FLOSS &mdash; Evaluacion de Software Libre</h3>
+              <p class="project-description">Herramienta de evaluacion de adopcion de software FLOSS. Evalua 18 factores clave con grafico radar de resultados y exportacion a PDF. Historial de evaluaciones persistido en PostgreSQL.</p>
+              <div class="project-problem">
+                <span class="project-problem-label">&#127919; Problema que resuelve</span>
+                <p>La ausencia de herramientas estructuradas para medir objetivamente la viabilidad de adoptar software de codigo abierto en organizaciones. Genera reportes tecnicos reproducibles.</p>
               </div>
-              <div class="teaser-info">
-                <h4>GUIOSPRO</h4>
-                <span>Open Source</span>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Vite</span><span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span>
               </div>
-              <span class="teaser-arrow">→</span>
             </div>
-
-            <!-- Teaser 5: UNEMI Bikes -->
-            <div class="showcase-teaser-card" data-project-id="unemi-bikes" title="Clic para explorar UNEMI Bikes">
-              <div class="teaser-logo-wrap">
-                <img src="assets/unemi_bikes.png" alt="UNEMI Bikes" class="teaser-logo">
-              </div>
-              <div class="teaser-info">
-                <h4>UNEMI Bikes</h4>
-                <span>UX/UI Design</span>
-              </div>
-              <span class="teaser-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- Botón de acción principal solicitado -->
-          <div class="showcase-action-wrap">
-            <button type="button" id="open-projects-catalog-btn" class="btn btn-hero-primary btn-projects-launcher">
-              <svg class="icon-inline" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-              <span>Ver Proyectos (5)</span>
-            </button>
-            <p class="showcase-note">Haz clic para abrir la ventana con todos los proyectos, filtros por categoría y
-              especificaciones completas.</p>
-          </div>
+            <footer class="project-footer">
+              <a href="https://github.com/Jostinchalan/GUIOSPRO-FLOSS" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
+            </footer>
+          </article>
         </div>
       </div>
     </section>
