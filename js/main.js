@@ -1,4 +1,4 @@
-/**
+﻿/**
  * PORTAFOLIO WEB INTERACTIVO - JAVASCRIPT MODULAR
  * Estudiante: Jostin Fernando Chalan Mora
  * Funcionalidades interactivas cumpliendo con la rúbrica
@@ -78,28 +78,44 @@ function initMobileMenu() {
    3. FILTRADO INTERACTIVO DE PROYECTOS
    ========================================================================== */
 function initProjectFilter() {
-  const filterBtns = document.querySelectorAll('.project-filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const filterNav = document.getElementById('project-filter-nav');
+  if (!filterNav) return;
+
+  const filterBtns = filterNav.querySelectorAll('.project-filter-btn');
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
+
+  const projectCards = grid.querySelectorAll('.project-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const category = btn.getAttribute('data-category');
+      const filter = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
-          card.style.display = 'flex';
-          setTimeout(() => card.style.opacity = '1', 50);
-        } else {
+        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+        const match = filter === 'all' || tags.includes(filter.toLowerCase());
+
+        if (match) {
+          card.classList.remove('hidden');
           card.style.opacity = '0';
-          setTimeout(() => card.style.display = 'none', 200);
+          card.style.transform = 'translateY(8px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.classList.add('hidden');
+          card.style.opacity = '';
+          card.style.transform = '';
         }
       });
     });
   });
+}
 }
 
 /* ==========================================================================

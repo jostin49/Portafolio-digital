@@ -454,8 +454,21 @@
             Soluciones aplicadas que resuelven necesidades reales con codigo estructurado y repositorios abiertos.
           </p>
         </header>
-        <div class="projects-grid" role="list">
-          <article class="project-card" role="listitem">
+
+        <!-- Filtros por tecnología -->
+        <nav class="project-filter-nav" aria-label="Filtro por tecnología" id="project-filter-nav">
+          <button class="project-filter-btn active" data-filter="all">Todos</button>
+          <button class="project-filter-btn" data-filter="Python">Python</button>
+          <button class="project-filter-btn" data-filter="React">React</button>
+          <button class="project-filter-btn" data-filter="TypeScript">TypeScript</button>
+          <button class="project-filter-btn" data-filter="FastAPI">FastAPI</button>
+          <button class="project-filter-btn" data-filter="PostgreSQL">PostgreSQL</button>
+          <button class="project-filter-btn" data-filter="Figma">Figma</button>
+          <button class="project-filter-btn" data-filter="IA">IA / ML</button>
+        </nav>
+
+        <div class="projects-grid" id="projects-grid" role="list">
+          <article class="project-card" role="listitem" data-tags="Python TensorFlow FastAPI Docker IA">
             <figure class="project-figure">
               <img src="assets/EcoScam.png" alt="EcoScan" class="project-img contain" loading="lazy">
               <figcaption class="project-category-badge">IA - Eco-Tech</figcaption>
@@ -475,7 +488,7 @@
               <a href="https://github.com/Jostinchalan/EcoScam---Clasificacion-de-Residuos" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
             </footer>
           </article>
-          <article class="project-card" role="listitem">
+          <article class="project-card" role="listitem" data-tags="Python Django React NLP IA">
             <figure class="project-figure">
               <img src="assets/CuentIA.png" alt="CuentIA" class="project-img contain" loading="lazy">
               <figcaption class="project-category-badge">IA - Educacion</figcaption>
@@ -495,7 +508,7 @@
               <a href="https://github.com/Jostinchalan/CUENTIA" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Repositorio GitHub</a>
             </footer>
           </article>
-          <article class="project-card" role="listitem">
+          <article class="project-card" role="listitem" data-tags="React Next.js TypeScript HTML CSS">
             <figure class="project-figure">
               <img src="assets/AgroMercado.png" alt="AgroMercado" class="project-img contain" loading="lazy">
               <figcaption class="project-category-badge">E-commerce - Web</figcaption>
@@ -516,7 +529,7 @@
               <a href="https://agro-mercado.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Visualizar</a>
             </footer>
           </article>
-          <article class="project-card" role="listitem">
+          <article class="project-card" role="listitem" data-tags="React TypeScript Vite FastAPI PostgreSQL">
             <figure class="project-figure">
               <img src="assets/GuiosPro.png" alt="GUIOSPRO-FLOSS" class="project-img contain" loading="lazy">
               <figcaption class="project-category-badge">Open Source - Evaluacion</figcaption>
@@ -537,7 +550,7 @@
               <a href="https://guiospro-floss-1vve.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Visualizar</a>
             </footer>
           </article>
-          <article class="project-card" role="listitem">
+          <article class="project-card" role="listitem" data-tags="Figma UX UI Design">
             <figure class="project-figure">
               <img src="assets/unemi_bikes.png" alt="UNEMI Bikes" class="project-img contain" loading="lazy">
               <figcaption class="project-category-badge">UX/UI Design</figcaption>

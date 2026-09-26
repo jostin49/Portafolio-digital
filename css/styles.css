@@ -1447,6 +1447,53 @@ ul, ol {
 /* ==========================================================================
    6. SECCIÓN PROYECTOS DESTACADOS
    ========================================================================== */
+/* ── Filtros de proyectos ── */
+.project-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.project-filter-btn {
+  padding: 0.4rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.project-filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: rgba(59, 130, 246, 0.06);
+}
+
+.project-filter-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(6, 48, 127, 0.25);
+}
+
+[data-theme="dark"] .project-filter-btn.active {
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+.project-card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
