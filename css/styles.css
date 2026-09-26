@@ -1509,7 +1509,7 @@ ul, ol {
 }
 
 [data-theme="dark"] .project-figure {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: #1e293b;
   border-bottom-color: var(--color-border);
 }
 
@@ -1521,11 +1521,12 @@ ul, ol {
 }
 
 .project-img.contain {
-  width: 65%;
-  height: 65%;
-  max-height: 95px;
+  width: 70%;
+  height: auto;
+  max-height: 130px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+  padding: 0.5rem;
 }
 
 .project-card:hover .project-img {
