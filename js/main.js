@@ -116,7 +116,7 @@ function initProjectFilter() {
     });
   });
 }
-}
+
 
 /* ==========================================================================
    4. FILTRADO INTERACTIVO DE HABILIDADES Y ACORDEÓN DE CATEGORÍAS
@@ -125,13 +125,13 @@ function initSkillFilter() {
   const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
   const skillPills = document.querySelectorAll('.skill-pill-btn');
   const modal = document.getElementById('skill-detail-modal');
-  
+
   console.log("initSkillFilter running! modal found:", !!modal, "pills found:", skillPills.length);
-  
+
   if (!modal) return;
 
   const closeBtn = document.getElementById('close-skill-modal');
-  
+
   // Elements inside modal to populate
   const modLogo = document.getElementById('modal-skill-logo');
   const modName = document.getElementById('modal-skill-name');
@@ -147,21 +147,21 @@ function initSkillFilter() {
     modName.textContent = btn.getAttribute('data-name');
     modSubcat.textContent = btn.getAttribute('data-subcat');
     modDesc.textContent = btn.getAttribute('data-desc');
-    
+
     modBadge.textContent = btn.getAttribute('data-badge');
     modBadge.className = 'skill-badge ' + btn.getAttribute('data-badge-class');
-    
+
     const progVal = btn.getAttribute('data-prog');
     modProgText.textContent = progVal;
-    
+
     // Reset progress bar animation
     modProgFill.style.width = '0%';
-    
+
     // Show modal
     modal.classList.add('is-active');
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
-    
+
     // Trigger progress bar animation
     setTimeout(() => {
       modProgFill.style.width = progVal;
@@ -184,7 +184,7 @@ function initSkillFilter() {
   });
 
   if (closeBtn) closeBtn.addEventListener('click', closeSkillModal);
-  
+
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       closeSkillModal();
