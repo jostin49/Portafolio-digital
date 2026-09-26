@@ -653,6 +653,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  text-align: left;
 }
 
 .about-bio-list li {
@@ -660,6 +661,7 @@ ul, ol {
   align-items: flex-start;
   gap: 0.6rem;
   line-height: 1.65;
+  text-align: left;
 }
 
 .about-bio-list li::before {
@@ -2803,6 +2805,14 @@ img, video, iframe, embed, object {
     text-align: justify;
     hyphens: none;
   }
+  .about-bio-list {
+    text-align: left;
+    align-self: stretch;
+    width: 100%;
+  }
+  .about-bio-list li {
+    text-align: left;
+  }
   .about-tech-checklist {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2969,6 +2979,14 @@ img, video, iframe, embed, object {
   .about-bio-text p {
     text-align: justify;
     hyphens: none;
+  }
+  .about-bio-list {
+    text-align: left;
+    align-self: stretch;
+    width: 100%;
+  }
+  .about-bio-list li {
+    text-align: left;
   }
   .about-tech-checklist        { grid-template-columns: 1fr; }
   .about-meta-row {
