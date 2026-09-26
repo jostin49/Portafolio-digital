@@ -158,7 +158,6 @@ ul, ol {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   transition: background-color var(--transition-normal), border-color var(--transition-normal);
-  overflow: hidden;
 }
 
 [data-theme="dark"] .site-header {
@@ -2777,7 +2776,6 @@ img, video, iframe, embed, object {
   .site-header {
     width: 100vw;
     max-width: 100%;
-    overflow: hidden;
   }
   .navbar {
     height: 3.75rem;
