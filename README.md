@@ -10,6 +10,14 @@
 
 ---
 
+## 📸 Vista Previa del Proyecto
+
+![Vista del portafolio en laptop, tablet y móvil](assets/screenshots/devices_mockup.jpg)
+
+> 🌐 **Demo en vivo:** [jostin49.github.io/Portafolio-digital](https://jostin49.github.io/Portafolio-digital/)
+
+---
+
 ## 1. Descripción del Proyecto
 
 Portafolio web individual, interactivo y accesible desarrollado desde cero con estricta **separación de capas**:
