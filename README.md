@@ -1,4 +1,4 @@
-# 🚀 Portafolio Digital — Jostin Fernando Chalan Mora
+# Portafolio Digital — Jostin Fernando Chalan Mora
 
 > **Estudiante:** Jostin Fernando Chalan Mora
 > **Carrera:** Ingeniería en Software (Octavo Semestre)
@@ -10,9 +10,9 @@
 
 ---
 
-## 📸 Vista Previa del Proyecto
+## Vista Previa del Proyecto
 
-![Vista del portafolio en laptop, tablet y móvil](assets/screenshots/devices_mockup.jpg)
+![Vista del portafolio en laptop, tablet y móvil](assets/preview.jpg)
 
 > 🌐 **Demo en vivo:** [jostin49.github.io/Portafolio-digital](https://jostin49.github.io/Portafolio-digital/)
 
